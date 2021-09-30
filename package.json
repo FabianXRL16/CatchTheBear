@@ -1,0 +1,16 @@
+{
+  "name": "catchmonkey",
+  "version": "1.0.0",
+  "description": "Mini game with pure css, making use of animations, consists of touching the monkey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "html",
+    "animation"
+  ],
+  "author": "Fabian Pacherres",
+  "license": "MIT"
+}
