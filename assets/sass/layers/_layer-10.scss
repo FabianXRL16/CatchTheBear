@@ -1,0 +1,17 @@
+@import '../mixins';
+
+.layer-11{
+    @include layer($w: 100%, $h: 200px, $bg: transparent, $bt: 0, $lt: 0);
+    margin: 0 auto;
+    // border-radius: 50%;
+    // box-shadow:
+    // rgb(238, 255, 0) -40px 30px 0px 0px,
+    // rgb(238, 255, 0) 60px -10px 0px 10px, 
+    // rgb(238, 255, 0) 0px 80px 0px 40px,
+    // rgb(238, 255, 0) 50px 80px 0px 40px;
+    img{
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+    }
+}
