@@ -1,0 +1,6 @@
+@import '../mixins';
+
+.layer-3{
+    @include layer($w: 340px, $h: 420px, $bg: $bg-tree-1, $bt: 0, $rt:20px);
+    border-radius: 20px 20px 0 0;
+}
