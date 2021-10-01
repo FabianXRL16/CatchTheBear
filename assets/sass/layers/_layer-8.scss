@@ -1,6 +1,39 @@
-@import '../mixins';
+@import "../mixins";
 
-.layer-8{
-    @include layer($w: 200px, $h: 160px, $bg: $bg-tree-4, $bt: 0, $rt: 0, $z: 8);
-    border-radius: 20px 0 0 0;
+.layer-8 {
+  @include layer($w: 180px, $h: 120px, $bg: transparent, $bt: 138px, $lt: 34px, $z: 8);
+  display: grid;
+  grid-template-areas: "catch the""catch monkey";
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 25px 1fr;
+  .catch {
+    grid-area: catch;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: end;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin-right: -5px;
+    margin-top: 3px;
+    color: #000000;
+  }
+  .the {
+    grid-area: the;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin-top: -5px;
+    color: #0a492c;
+  }
+  .monkey {
+    grid-area: monkey;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    margin-left: -3px;
+    margin-top: -10px;
+    color: #a4f8d1;
+    ;
+  }
 }

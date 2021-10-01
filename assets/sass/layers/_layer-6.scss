@@ -1,6 +1,5 @@
 @import '../mixins';
 
 .layer-6{
-    @include layer($w: 300px, $h: 290px, $bg: $bg-tree-3, $bt: 0, $lt: 0, $z: 6);
-    border-radius: 0 20px 20px 0;
+    @include layer($w: 100px, $h: 260px, $bg: white, $bt: 0, $rt: 45px, $z: 6);
 }

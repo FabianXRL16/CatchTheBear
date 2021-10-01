@@ -4,7 +4,7 @@
   height: 676px;
   border-radius: 40px;
   border: 6px solid white;
-  background-color: #42ab49;
+  background-color: #42ab7e;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
   overflow-x: auto;
 }
@@ -35,12 +35,13 @@
   position: absolute;
   width: 340px;
   height: 420px;
-  background-color: #98f6a9;
+  background-color: #57f38b;
   bottom: 0;
   right: 20px;
   left: auto;
   z-index: 3;
   border-radius: 20px 20px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
 }
 
 .layer-4 {
@@ -50,57 +51,92 @@
   background-color: white;
   bottom: 0;
   right: auto;
-  left: 150px;
+  left: 80px;
   z-index: 4;
 }
 
 .layer-5 {
   position: absolute;
-  width: 100px;
-  height: 370px;
-  background-color: white;
+  width: 220px;
+  height: 290px;
+  background-color: #1aa363;
   bottom: 0;
   right: auto;
-  left: 0;
+  left: 20px;
   z-index: 5;
+  border-radius: 20px 20px 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
 }
 
 .layer-6 {
   position: absolute;
-  width: 300px;
-  height: 290px;
-  background-color: #77dd77;
+  width: 100px;
+  height: 260px;
+  background-color: white;
   bottom: 0;
-  right: auto;
-  left: 0;
+  right: 45px;
+  left: auto;
   z-index: 6;
-  border-radius: 0 20px 20px 0;
 }
 
 .layer-7 {
   position: absolute;
-  width: 100px;
-  height: 240px;
-  background-color: white;
+  width: 200px;
+  height: 180px;
+  background-color: #c1cb08;
   bottom: 0;
-  right: 40px;
+  right: 0;
   left: auto;
   z-index: 7;
+  border-radius: 20px 0 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
 }
 
 .layer-8 {
   position: absolute;
-  width: 200px;
-  height: 160px;
-  background-color: #5dc460;
-  bottom: 0;
-  right: 0;
-  left: auto;
+  width: 180px;
+  height: 120px;
+  background-color: transparent;
+  bottom: 138px;
+  right: auto;
+  left: 34px;
   z-index: 8;
-  border-radius: 20px 0 0 0;
+  display: grid;
+  grid-template-areas: "catch the" "catch monkey";
+  grid-template-columns: 30px 1fr;
+  grid-template-rows: 25px 1fr;
+}
+.layer-8 .catch {
+  grid-area: catch;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: end;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  margin-right: -5px;
+  margin-top: 3px;
+  color: #000000;
+}
+.layer-8 .the {
+  grid-area: the;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  margin-top: -5px;
+  color: #0a492c;
+}
+.layer-8 .monkey {
+  grid-area: monkey;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 38px;
+  margin-left: -3px;
+  margin-top: -10px;
+  color: #a4f8d1;
 }
 
-.layer-10 {
+.layer-9 {
   position: absolute;
   width: 100%;
   height: 200px;
@@ -108,10 +144,10 @@
   bottom: 0;
   right: auto;
   left: 0;
-  z-index: 10;
+  z-index: 9;
   margin: 0 auto;
 }
-.layer-10 img {
+.layer-9 img {
   position: absolute;
   width: 100%;
   bottom: 0px;
