@@ -1,0 +1,9 @@
+@mixin layer($w, $h, $bg, $bt: auto, $rt: auto, $lt: auto) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  background-color: $bg;
+  bottom: $bt;
+  right: $rt;
+  left: $lt;
+}
