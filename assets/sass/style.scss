@@ -1,3 +1,19 @@
+@import './vars';
+@import './canvas';
+@import './layers/layer-1';
+@import './layers/layer-2';
+@import './layers/layer-3';
+@import './layers/layer-4';
+@import './layers/layer-5';
+@import './layers/layer-6';
+@import './layers/layer-7';
+@import './layers/layer-8';
+
 body{
-    background-color: red;
+    background-color: $bg-primary;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
 }

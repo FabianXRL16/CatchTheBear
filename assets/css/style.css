@@ -1,5 +1,104 @@
+.canvas {
+  position: relative;
+  width: 425px;
+  height: 676px;
+  border-radius: 40px;
+  border: 6px solid white;
+  background-color: #42ab49;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
+  overflow-x: auto;
+}
+
+.layer-1 {
+  position: absolute;
+  width: 100px;
+  height: 500px;
+  background-color: white;
+  bottom: 0;
+  right: 65px;
+  left: auto;
+}
+
+.layer-2 {
+  position: absolute;
+  width: 100px;
+  height: 500px;
+  background-color: white;
+  bottom: 0;
+  right: auto;
+  left: 110px;
+}
+
+.layer-3 {
+  position: absolute;
+  width: 340px;
+  height: 420px;
+  background-color: #98f6a9;
+  bottom: 0;
+  right: 20px;
+  left: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.layer-4 {
+  position: absolute;
+  width: 100px;
+  height: 370px;
+  background-color: white;
+  bottom: 0;
+  right: auto;
+  left: 150px;
+}
+
+.layer-5 {
+  position: absolute;
+  width: 100px;
+  height: 370px;
+  background-color: white;
+  bottom: 0;
+  right: auto;
+  left: 0;
+}
+
+.layer-6 {
+  position: absolute;
+  width: 300px;
+  height: 290px;
+  background-color: #77dd77;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  border-radius: 0 20px 20px 0;
+}
+
+.layer-7 {
+  position: absolute;
+  width: 100px;
+  height: 240px;
+  background-color: white;
+  bottom: 0;
+  right: 40px;
+  left: auto;
+}
+
+.layer-8 {
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  background-color: #5dc460;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  border-radius: 20px 0 0 0;
+}
+
 body {
-  background-color: red;
+  background-color: #a2edce;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
