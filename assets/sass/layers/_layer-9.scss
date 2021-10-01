@@ -1,5 +1,18 @@
 @import '../mixins';
 
 .layer-9{
-    @include layer($w: 100px, $h: 240px, $bg: white, $bt: 0, $lt: 0);
+    @include layer($w: 250px, $h: 240px, $bg: white, $bt: 200px, $lt: 0, $z: 9);
+    display: grid;
+    grid-template: 100px 1fr / 40px 1fr;
+    .catch{
+        background-color: violet;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .the{
+        background-color: rgb(107, 31, 107);
+    }
+    .monkey{
+        background-color: rgb(146, 33, 146);
+    }
 }

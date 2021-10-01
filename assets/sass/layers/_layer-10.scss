@@ -1,7 +1,7 @@
 @import '../mixins';
 
-.layer-11{
-    @include layer($w: 100%, $h: 200px, $bg: transparent, $bt: 0, $lt: 0);
+.layer-10{
+    @include layer($w: 100%, $h: 200px, $bg: transparent, $bt: 0, $lt: 0, $z: 10);
     margin: 0 auto;
     // border-radius: 50%;
     // box-shadow:

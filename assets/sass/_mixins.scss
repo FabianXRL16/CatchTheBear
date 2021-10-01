@@ -1,4 +1,4 @@
-@mixin layer($w, $h, $bg, $bt: auto, $rt: auto, $lt: auto) {
+@mixin layer($w, $h, $bg, $bt: auto, $rt: auto, $lt: auto, $z: 1) {
   position: absolute;
   width: $w;
   height: $h;
@@ -6,4 +6,5 @@
   bottom: $bt;
   right: $rt;
   left: $lt;
+  z-index: $z;
 }

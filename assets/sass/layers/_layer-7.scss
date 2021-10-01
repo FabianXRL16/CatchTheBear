@@ -1,5 +1,5 @@
 @import '../mixins';
 
 .layer-7{
-    @include layer($w: 100px, $h: 240px, $bg: white, $bt: 0, $rt: 40px);
+    @include layer($w: 100px, $h: 240px, $bg: white, $bt: 0, $rt: 40px, $z: 7);
 }
