@@ -92,6 +92,32 @@
   border-radius: 20px 0 0 0;
 }
 
+.layer-9 {
+  position: absolute;
+  width: 100px;
+  height: 240px;
+  background-color: white;
+  bottom: 0;
+  right: auto;
+  left: 0;
+}
+
+.layer-11 {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  margin: 0 auto;
+}
+.layer-11 img {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
 body {
   background-color: #a2edce;
   width: 100%;
