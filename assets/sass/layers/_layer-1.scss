@@ -17,6 +17,9 @@
 
   input[type="checkbox"] {
     @include input($z: 1);
+    &:checked {
+      counter-increment: game;
+    }
   }
 }
 

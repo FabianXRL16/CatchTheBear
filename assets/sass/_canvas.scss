@@ -7,22 +7,47 @@
   border-radius: 40px;
   border: 6px solid rgb(255, 255, 255);
   background-color: $bg-secondary;
-  //   background: rgb(69, 148, 237);
-  //   background: linear-gradient(
-  //     180deg,
-  //     rgba(69, 148, 237, 1) 0%,
-  //     rgba(69, 148, 237, 1) 2%,
-  //     rgba(131, 180, 236, 1) 12%,
-  //     rgba(178, 218, 250, 1) 27%,
-  //     rgba(178, 218, 250, 1) 36%,
-  //     rgba(253, 253, 150, 1) 46%,
-  //     rgba(253, 253, 150, 1) 50%,
-  //     rgba(255, 150, 136, 1) 65%,
-  //     rgba(255, 150, 136, 1) 74%,
-  //     rgba(255, 150, 136, 1) 100%
-  //   );
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 40px 60px -40px,
     rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
   overflow-x: auto;
+
+  counter-reset: game;
+
+  .score {
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    &::after {
+      content: counter(game);
+      color: rgb(0, 156, 156);
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+  }
+
+  .author {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 12;
+    text-align: center;
+    a {
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      color: $bg-tree-4;
+      font-weight: 500;
+      font-size: 12px;
+      transition: 0.3s;
+      transform: scale(0.9);
+      &:hover{
+        color: white;
+        transition: 0.3s;
+      }
+    }
+  }
 }
