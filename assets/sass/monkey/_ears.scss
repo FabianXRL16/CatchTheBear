@@ -1,0 +1,21 @@
+.ears{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 1px;
+    top: 10px;
+    background-color: #582e0b;
+    position: absolute;
+    box-shadow: #994f13 -2px -1px 0px 4px;
+}
+
+.ears::after{
+    content: " ";
+    position: absolute;
+    background-color: #582e0b;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    right: -66px;
+    box-shadow: #994f13 1px -1px 0px 4px;
+}

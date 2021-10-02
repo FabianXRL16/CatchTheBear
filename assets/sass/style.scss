@@ -1,5 +1,7 @@
 @import './vars';
+
 @import './canvas';
+
 @import './layers/layer-1';
 @import './layers/layer-2';
 @import './layers/layer-3';
@@ -9,6 +11,12 @@
 @import './layers/layer-7';
 @import './layers/layer-8';
 @import './layers/layer-9';
+
+@import './monkey/ears';
+@import './monkey/eyes';
+@import './monkey/head';
+@import './monkey/mouth';
+@import './monkey/nose';
 
 body{
     background-color: $bg-primary;
