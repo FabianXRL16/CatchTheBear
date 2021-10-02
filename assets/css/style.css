@@ -7,18 +7,16 @@
   background-color: #37d0e4;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
   overflow-x: auto;
-  counter-reset: game;
 }
-.canvas .score {
+.canvas .scoreTotal {
   text-align: center;
   margin-top: 70px;
   font-family: "Poppins", sans-serif;
   color: white;
-  text-transform: uppercase;
   font-weight: 500;
 }
-.canvas .score::after {
-  content: counter(game);
+.canvas .scoreTotal::after {
+  content: counter(score);
   color: #009c9c;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -62,12 +60,11 @@
   position: absolute;
   appearance: none;
   cursor: pointer;
+  outline: none;
   z-index: 1;
   width: 100%;
   height: 80px;
-}
-.layer-1 input[type=checkbox]:checked {
-  counter-increment: game;
+  left: -15px;
 }
 
 @keyframes bear1 {
@@ -99,9 +96,11 @@
   position: absolute;
   appearance: none;
   cursor: pointer;
+  outline: none;
   z-index: 2;
   width: 100%;
   height: 80px;
+  left: -15px;
 }
 
 @keyframes bear2 {
@@ -146,9 +145,11 @@
   position: absolute;
   appearance: none;
   cursor: pointer;
+  outline: none;
   z-index: 4;
   width: 100%;
   height: 80px;
+  left: -15px;
 }
 
 @keyframes bear3 {
@@ -193,9 +194,11 @@
   position: absolute;
   appearance: none;
   cursor: pointer;
+  outline: none;
   z-index: 6;
   width: 100%;
   height: 80px;
+  left: -15px;
 }
 
 @keyframes bear4 {
@@ -503,13 +506,21 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+:root {
+  counter-reset: score;
+}
+
 body {
-  background-color: #44e9a4;
+  background-color: #ffbc20;
   width: 100%;
   height: 100vh;
   margin: 0;
   display: grid;
   place-items: center;
+}
+
+input:checked {
+  counter-increment: score;
 }
 
 /*# sourceMappingURL=style.css.map */

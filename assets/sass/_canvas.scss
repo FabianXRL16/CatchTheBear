@@ -12,18 +12,15 @@
     rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
   overflow-x: auto;
 
-  counter-reset: game;
-
-  .score {
+  .scoreTotal {
     text-align: center;
     margin-top: 70px;
     font-family: "Poppins", sans-serif;
     color: white;
-    text-transform: uppercase;
     font-weight: 500;
 
     &::after {
-      content: counter(game);
+      content: counter(score);
       color: rgb(0, 156, 156);
       font-family: "Poppins", sans-serif;
       font-weight: 600;
