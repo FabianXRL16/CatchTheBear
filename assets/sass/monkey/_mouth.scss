@@ -12,7 +12,8 @@
     $bg: #994e10
   );
   animation-name: smile;
-  animation-duration: 2s;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
   animation-iteration-count: infinite;
   border: 2px solid #000;
 }
