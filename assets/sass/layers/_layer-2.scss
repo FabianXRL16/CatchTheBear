@@ -1,5 +1,33 @@
-@import '../mixins';
+@import "../mixins";
 
-.layer-2{
-    @include layer($w: 100px, $h: 500px, $bg: transparent, $bt: 0, $lt: 110px, $z: 2);
+.layer-2 {
+  @include layer(
+    $w: 100px,
+    $h: 500px,
+    $bg: transparent,
+    $bt: 0,
+    $lt: 110px,
+    $z: 2
+  );
+
+  animation-name: bear2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  input[type="checkbox"] {
+    @include input($z: 2);
+  }
+}
+
+@keyframes bear2 {
+  0% {
+    height: 500px;
+  }
+  10% {
+    height: 420px;
+  }
+  100% {
+    height: 500px;
+  }
 }
