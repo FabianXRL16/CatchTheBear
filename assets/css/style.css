@@ -117,6 +117,20 @@
   margin-right: -5px;
   margin-top: 3px;
   color: #000000;
+  animation-name: wordCatch;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes wordCatch {
+  0% {
+    color: #000000;
+  }
+  50% {
+    color: #05522e;
+  }
+  100% {
+    color: #000000;
+  }
 }
 .layer-8 .the {
   grid-area: the;
@@ -125,6 +139,20 @@
   font-size: 38px;
   margin-top: -10px;
   color: #0a492c;
+  animation-name: wordThe;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes wordThe {
+  0% {
+    color: #0a492c;
+  }
+  50% {
+    color: #012e19;
+  }
+  100% {
+    color: #0a492c;
+  }
 }
 .layer-8 .bear {
   grid-area: bear;
@@ -134,6 +162,20 @@
   margin-left: -3px;
   margin-top: -15px;
   color: #a4f8d1;
+  animation-name: wordBear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes wordBear {
+  0% {
+    color: #a4f8d1;
+  }
+  50% {
+    color: #e0fff0;
+  }
+  100% {
+    color: #a4f8d1;
+  }
 }
 
 .layer-9 {
@@ -193,7 +235,7 @@
   bottom: auto;
   margin: auto;
   background-color: #000;
-  animation: blink;
+  animation-name: blink;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   box-shadow: #d4813d 0px 0px 0px 10px, #d4813d 12px 10px 0px 5px;
@@ -226,7 +268,7 @@
   bottom: auto;
   margin: auto;
   background-color: #000;
-  animation: blink;
+  animation-name: blink;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   box-shadow: #d4813d 0px 0px 0px 10px;
@@ -256,7 +298,7 @@
   bottom: auto;
   margin: auto;
   background-color: #994e10;
-  animation: smile;
+  animation-name: smile;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   border: 2px solid #000;

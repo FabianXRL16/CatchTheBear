@@ -11,22 +11,22 @@
     $m: auto,
     $bg: #994e10
   );
-  animation: smile;
+  animation-name: smile;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   border: 2px solid #000;
 }
 
-@keyframes smile{
-0%{
-height: 45px;
-}
-5%{
-  height: 30px;
-}
-10%{
-  height: 45px;
-}
+@keyframes smile {
+  0% {
+    height: 45px;
+  }
+  5% {
+    height: 30px;
+  }
+  10% {
+    height: 45px;
+  }
 }
 
 .mouth::before {
