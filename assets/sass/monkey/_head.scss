@@ -1,8 +1,14 @@
-.head{
-    width: 80px;
-    height: 90px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background-color: #b4601b;
-    position: absolute;
+@import "../mixins";
+
+.head {
+  @include bodyPart(
+    $w: 80px,
+    $h: 90px,
+    $lt: auto,
+    $rt: auto,
+    $tp: auto,
+    $bt: auto,
+    $m: 0 auto,
+    $bg: #b4601b
+  );
 }

@@ -8,3 +8,16 @@
   left: $lt;
   z-index: $z;
 }
+
+@mixin bodyPart($w, $h, $lt, $rt, $tp, $bt, $m, $bg) {
+  position: absolute;
+  width: $w;
+  height: $h;
+  border-radius: 50%;
+  left: $lt;
+  right: $rt;
+  top: $tp;
+  bottom: $bt;
+  margin: $m;
+  background-color: $bg;
+}

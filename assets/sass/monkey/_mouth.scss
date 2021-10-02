@@ -1,31 +1,44 @@
-.mouth{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    left: 16.8px;
-    top: 33px;
-    border: 2px solid #000;;
-    background-color: #d3762a;
-    position: absolute;
+@import "../mixins";
+
+.mouth {
+  @include bodyPart(
+    $w: 45px,
+    $h: 45px,
+    $lt: 16.8px,
+    $rt: auto,
+    $tp: 33px,
+    $bt: auto,
+    $m: auto,
+    $bg: #994e10
+  );
+  border: 2px solid #000;
 }
 
-.mouth::before{
-    content: " ";
-    position: absolute;
-    background-color: #d3762a;
-    width: 44px;
-    height: 32px;
-    border-radius: 50%;
-    left: .4px;
-    top: 4px;
-    border-bottom: 3px solid #000;
+.mouth::before {
+  content: " ";
+  @include bodyPart(
+    $w: 44px,
+    $h: 32px,
+    $lt: 0.4px,
+    $rt: auto,
+    $tp: 4px,
+    $bt: auto,
+    $m: auto,
+    $bg: #994e10
+  );
+  border-bottom: 3px solid #000;
 }
 
-.mouth::after{
-    content: " ";
-    position: absolute;
-    background-color: #000000;
-    width: .4px;
-    height: 38px;
-    left: 22.2px;
+.mouth::after {
+  content: " ";
+  @include bodyPart(
+    $w: 0.4px,
+    $h: 39px,
+    $lt: 22.2px,
+    $rt: auto,
+    $tp: auto,
+    $bt: auto,
+    $m: auto,
+    $bg: #000
+  );
 }

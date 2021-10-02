@@ -1,21 +1,30 @@
-.eyes{
-    width: 6px;
-    height: 15px;
-    border-radius: 50%;
-    left: 25px;
-    top: 20px;
-    background-color: #000000;
-    position: absolute;
-    box-shadow: #d4813d 0px 0px 0px 10px, #d4813d 12px 10px 0px 5px;
+@import "../mixins";
+
+.eyes {
+  @include bodyPart(
+    $w: 6px,
+    $h: 15px,
+    $lt: 25px,
+    $rt: auto,
+    $tp: 20px,
+    $bt: auto,
+    $m: auto,
+    $bg: #000
+  );
+  box-shadow: #d4813d 0px 0px 0px 10px, #d4813d 12px 10px 0px 5px;
 }
 
-.eyes::after{
-    content: " ";
-    position: absolute;
-    background-color: #000000;
-    width: 6px;
-    height: 15px;
-    border-radius: 50%;
-    left: 25px;
-    box-shadow: #d4813d 0px 0px 0px 10px;
+.eyes::after {
+  content: " ";
+  @include bodyPart(
+    $w: 6px,
+    $h: 15px,
+    $lt: 25px,
+    $rt: auto,
+    $tp: auto,
+    $bt: auto,
+    $m: auto,
+    $bg: #000
+  );
+  box-shadow: #d4813d 0px 0px 0px 10px;
 }
