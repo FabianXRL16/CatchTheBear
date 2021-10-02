@@ -1,0 +1,15 @@
+@import "../mixins";
+
+.shadow {
+  @include bodyPart(
+    $w: 75px,
+    $h: 85px,
+    $lt: 2px,
+    $rt: auto,
+    $tp: 2px,
+    $bt: auto,
+    $m: 0 auto,
+    $bg: #000000
+  );
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
