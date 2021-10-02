@@ -18,8 +18,31 @@
   right: 65px;
   left: auto;
   z-index: 1;
+  animation-name: bear1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.layer-1 input[type=checkbox] {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
 }
 
+@keyframes bear1 {
+  0% {
+    height: 500px;
+  }
+  25% {
+    height: 420px;
+  }
+  100% {
+    height: 500px;
+  }
+}
 .layer-2 {
   position: absolute;
   width: 100px;
