@@ -11,7 +11,22 @@
     $m: auto,
     $bg: #994e10
   );
+  animation: smile;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   border: 2px solid #000;
+}
+
+@keyframes smile{
+0%{
+height: 45px;
+}
+5%{
+  height: 30px;
+}
+10%{
+  height: 45px;
+}
 }
 
 .mouth::before {
@@ -32,9 +47,9 @@
 .mouth::after {
   content: " ";
   @include bodyPart(
-    $w: 0.4px,
+    $w: 3px,
     $h: 39px,
-    $lt: 22.2px,
+    $lt: 21px,
     $rt: auto,
     $tp: auto,
     $bt: auto,
