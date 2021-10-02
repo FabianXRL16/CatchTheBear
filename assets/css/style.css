@@ -102,8 +102,8 @@
   left: 34px;
   z-index: 8;
   display: grid;
-  grid-template-areas: "catch the" "catch monkey";
-  grid-template-columns: 30px 1fr;
+  grid-template-areas: "catch the" "catch bear";
+  grid-template-columns: 35px 1fr;
   grid-template-rows: 25px 1fr;
 }
 .layer-8 .catch {
@@ -111,7 +111,7 @@
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   text-align: end;
-  font-size: 18px;
+  font-size: 26px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   margin-right: -5px;
@@ -122,17 +122,17 @@
   grid-area: the;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 28px;
-  margin-top: -5px;
+  font-size: 38px;
+  margin-top: -10px;
   color: #0a492c;
 }
-.layer-8 .monkey {
-  grid-area: monkey;
+.layer-8 .bear {
+  grid-area: bear;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 38px;
+  font-size: 64px;
   margin-left: -3px;
-  margin-top: -10px;
+  margin-top: -15px;
   color: #a4f8d1;
 }
 
