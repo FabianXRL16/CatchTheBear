@@ -11,7 +11,27 @@
     $m: auto,
     $bg: #000
   );
+  animation: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   box-shadow: #d4813d 0px 0px 0px 10px, #d4813d 12px 10px 0px 5px;
+}
+
+@keyframes blink {
+  0% {
+    height: 15px;
+  }
+  5% {
+    height: 3px;
+    transform: translate(0px, 6px);
+    border-radius: 100%;
+  }
+  10% {
+    height: 15px;
+    transform: translate(0px, 0px);
+    border-radius: 100%;
+
+  }
 }
 
 .eyes::after {
@@ -26,5 +46,8 @@
     $m: auto,
     $bg: #000
   );
+  animation: blink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
   box-shadow: #d4813d 0px 0px 0px 10px;
 }
