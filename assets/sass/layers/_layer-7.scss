@@ -1,7 +1,7 @@
 @import '../mixins';
 
 .layer-7{
-    @include layer($w: 200px, $h: 180px, $bg: $bg-tree-4, $bt: 0, $rt: 0, $z: 7);
+    @include layer($w: 200px, $h: 185px, $bg: $bg-tree-4, $bt: 0, $rt: 0, $z: 7);
     border-radius: 20px 0 0 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 40px 60px -40px,
