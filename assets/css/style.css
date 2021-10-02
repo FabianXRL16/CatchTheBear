@@ -20,7 +20,7 @@
   z-index: 1;
   animation-name: bear1;
   animation-duration: 1s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
   animation-iteration-count: infinite;
 }
 .layer-1 input[type=checkbox] {
@@ -52,8 +52,31 @@
   right: auto;
   left: 110px;
   z-index: 2;
+  animation-name: bear2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.layer-2 input[type=checkbox] {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: 2;
+  width: 100%;
+  height: 80px;
 }
 
+@keyframes bear2 {
+  0% {
+    height: 500px;
+  }
+  10% {
+    height: 420px;
+  }
+  100% {
+    height: 500px;
+  }
+}
 .layer-3 {
   position: absolute;
   width: 340px;
@@ -76,8 +99,31 @@
   right: auto;
   left: 80px;
   z-index: 4;
+  animation-name: bear3;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-iteration-count: infinite;
+}
+.layer-4 input[type=checkbox] {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: 4;
+  width: 100%;
+  height: 80px;
 }
 
+@keyframes bear3 {
+  0% {
+    height: 370px;
+  }
+  25% {
+    height: 290px;
+  }
+  100% {
+    height: 370px;
+  }
+}
 .layer-5 {
   position: absolute;
   width: 220px;
@@ -94,18 +140,41 @@
 .layer-6 {
   position: absolute;
   width: 100px;
-  height: 260px;
+  height: 265px;
   background-color: transparent;
   bottom: 0;
   right: 45px;
   left: auto;
   z-index: 6;
+  animation-name: bear4;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-iteration-count: infinite;
+}
+.layer-6 input[type=checkbox] {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: 6;
+  width: 100%;
+  height: 80px;
 }
 
+@keyframes bear4 {
+  0% {
+    height: 265px;
+  }
+  10% {
+    height: 185px;
+  }
+  100% {
+    height: 265px;
+  }
+}
 .layer-7 {
   position: absolute;
   width: 200px;
-  height: 180px;
+  height: 185px;
   background-color: #f7f313;
   bottom: 0;
   right: 0;
@@ -204,7 +273,7 @@
 .layer-9 {
   position: absolute;
   width: 100%;
-  height: 200px;
+  height: 181.63px;
   background-color: transparent;
   bottom: 0;
   right: auto;
