@@ -21,3 +21,12 @@
   margin: $m;
   background-color: $bg;
 }
+
+@mixin input($z) {
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: $z;
+  width: 100%;
+  height: 80px;
+}
