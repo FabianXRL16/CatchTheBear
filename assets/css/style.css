@@ -73,6 +73,7 @@
   position: relative;
   background-color: #0f7886;
   margin-bottom: 30px;
+  border: 1px solid #caf9ff;
 }
 .lobby .spaceBtn .btnPlay {
   height: 130px;
@@ -117,6 +118,44 @@
 .lobby .controls {
   display: flex;
   gap: 15px;
+}
+.lobby .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #0f7886;
+  border: 1px solid #caf9ff;
+  cursor: pointer;
+}
+.lobby .btn .icon {
+  color: #37d0e4;
+  font-size: 20px;
+}
+.lobby .btn .icon:hover {
+  color: #caf9ff;
+}
+.lobby .btn .on, .lobby .btn .sun {
+  display: block;
+  transition: 0.2s;
+}
+.lobby .btn .off, .lobby .btn .moon {
+  display: none;
+  transition: 0.2s;
+}
+.lobby .github {
+  color: #37d0e4;
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.lobby .github i {
+  transition: 0.2s;
+}
+.lobby .github:hover i {
+  color: #caf9ff;
 }
 .lobby .bestScores {
   text-align: center;

@@ -57,13 +57,14 @@
     position: relative;
     background-color: #0f7886;
     margin-bottom: 30px;
+    border: 1px solid #caf9ff;
     .btnPlay {
       @include btn($s: 130px, $br: 5px dotted #1b6670);
 
       position: absolute;
       top: 5px;
       left: 5px;
-      
+
       animation-name: turn;
       animation-duration: 5s;
       animation-timing-function: linear;
@@ -100,7 +101,43 @@
     display: flex;
     gap: 15px;
   }
+  .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0f7886;
+    border: 1px solid #caf9ff;
+    cursor: pointer;
+    .icon {
+      color: #37d0e4;
+      font-size: 20px;
+      &:hover{
+        color: #caf9ff;
+      }
+    }
+    .on, .sun {
+      display: block;
+      transition: .2s;
+    }
+    .off, .moon {
+      display: none;
+      transition: .2s;
+    }
+  }
   .github {
+    color: #37d0e4;
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    i {
+      transition: .2s;
+    }
+    &:hover i {
+      color: #caf9ff;
+    }
   }
 
   .bestScores {

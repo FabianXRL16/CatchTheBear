@@ -42,8 +42,34 @@ function countScore() {
   total.innerHTML = `Score ${score}`;
 }
 
+let i = 2;
+function theme() {
+  let sun = document.querySelector(".sun");
+  let moon = document.querySelector(".moon");
+  if (i % 2 === 0) {
+    sun.style.display = "none";
+    moon.style.display = "block";
+    moon.style.transform = "scale(1)";
+  } else {
+    moon.style.display = "none";
+    sun.style.display = "block";
+    sun.style.transform = "scale(1)";
+  }
+  i = i + 1;
+}
+
+let j = 2;
 function sound() {
-  let sound = document.querySelector("#sound");
-  sound.classList.remove("fa-volume-down");
-  sound.classList.add("fa-volume-off");
+  let on = document.querySelector(".on");
+  let off = document.querySelector(".off");
+  if (i % 2 === 0) {
+    on.style.display = "none";
+    off.style.display = "block";
+    off.style.transform = "scale(1)";
+  } else {
+    off.style.display = "none";
+    on.style.display = "block";
+    on.style.transform = "scale(1)";
+  }
+  i = i + 1;
 }
