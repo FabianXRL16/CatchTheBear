@@ -1,12 +1,17 @@
 @import "./mixins";
 
 .lobby {
+  position: absolute;
   width: 100%;
   height: 100%;
   display: grid;
   place-items: center;
   place-content: center;
   gap: 10px;
+  z-index: 3;
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1);
 
   .title {
     display: grid;
