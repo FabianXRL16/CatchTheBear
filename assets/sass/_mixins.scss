@@ -35,15 +35,13 @@
   border: none;
 }
 
-@mixin btn($s, $bg, $m, $c, $fs) {
-  outline: none;
-  width: $s;
+@mixin btn($s, $bg: transparent, $c: transparent, $br) {
   height: $s;
-  border: none;
-  background-color: $bg;
+  width: $s;
   border-radius: 50%;
-  cursor: pointer;
-  margin: $m;
+  background-color: $bg;
   color: $c;
-  font-size: $fs;
+  border: $br;
+  cursor: pointer;
+  outline: none;
 }

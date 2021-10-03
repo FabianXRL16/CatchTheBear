@@ -9,6 +9,15 @@
   position: relative;
 }
 
+@media (max-width: 425px) {
+  .canvas {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+  }
+}
 .lobby {
   position: absolute;
   width: 100%;
@@ -57,76 +66,57 @@
   margin-top: 5px;
   color: #caf9ff;
 }
-.lobby .btnPlay {
-  outline: none;
-  width: 120px;
-  height: 120px;
-  border: none;
-  background-color: #0f7886;
+.lobby .spaceBtn {
+  height: 140px;
+  width: 140px;
   border-radius: 50%;
+  position: relative;
+  background-color: #0f7886;
+  margin-bottom: 30px;
+}
+.lobby .spaceBtn .btnPlay {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: transparent;
+  border: 5px dotted #1b6670;
   cursor: pointer;
-  margin: 0 0 30px;
+  outline: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  animation-name: turn;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.lobby .spaceBtn .icon {
+  position: absolute;
+  font-size: 80px;
+  left: 40px;
+  top: 28px;
   color: #37d0e4;
-  font-size: 70px;
 }
-.lobby .btnPlay .icon {
-  transform: scale(1);
-  transition: 0.3s;
-  margin-left: 15px;
+@keyframes turn {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
-.lobby .btnPlay:hover .icon {
-  transform: scale(0.8);
-  transition: 0.3s;
+@keyframes turn2 {
+  to {
+    transform: rotate(360deg);
+  }
+  from {
+    transform: rotate(0deg);
+  }
 }
 .lobby .controls {
   display: flex;
   gap: 15px;
-}
-.lobby .controls .btn {
-  outline: none;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background-color: #0f7886;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 0 0 10px;
-  color: #37d0e4;
-  font-size: 30px;
-}
-.lobby .controls .btn .icon {
-  margin-top: 5px;
-  transform: scale(1);
-  transition: 0.3s;
-}
-.lobby .controls .btn:hover .icon {
-  transform: scale(0.8);
-  transition: 0.3s;
-}
-.lobby .controls .github {
-  outline: none;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background-color: #0f7886;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 0;
-  color: #37d0e4;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-.lobby .controls .github .icon {
-  margin-top: 3px;
-  transform: scale(1);
-  transition: 0.3s;
-}
-.lobby .controls .github:hover .icon {
-  transform: scale(0.8);
-  transition: 0.3s;
 }
 .lobby .bestScores {
   text-align: center;

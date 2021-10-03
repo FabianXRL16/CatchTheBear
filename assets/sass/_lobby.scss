@@ -50,57 +50,57 @@
       color: #caf9ff;
     }
   }
+  .spaceBtn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #0f7886;
+    margin-bottom: 30px;
+    .btnPlay {
+      @include btn($s: 130px, $br: 5px dotted #1b6670);
 
-  .btnPlay {
-    @include btn($s: 120px, $bg: #0f7886, $m: 0 0 30px, $c: #37d0e4, $fs: 70px);
-    .icon {
-      transform: scale(1);
-      transition: 0.3s;
-      margin-left: 15px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      
+      animation-name: turn;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
-    &:hover .icon {
-      transform: scale(0.8);
-      transition: 0.3s;
+    .icon {
+      position: absolute;
+      font-size: 80px;
+      left: 40px;
+      top: 28px;
+      color: #37d0e4;
+    }
+
+    @keyframes turn {
+      to {
+        transform: rotate(0deg);
+      }
+      from {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes turn2 {
+      to {
+        transform: rotate(360deg);
+      }
+      from {
+        transform: rotate(0deg);
+      }
     }
   }
 
   .controls {
     display: flex;
     gap: 15px;
-    .btn {
-      @include btn(
-        $s: 50px,
-        $bg: #0f7886,
-        $m: 0 0 10px,
-        $c: #37d0e4,
-        $fs: 30px
-      );
-      .icon {
-        margin-top: 5px;
-        transform: scale(1);
-        transition: 0.3s;
-      }
-      &:hover .icon {
-        transform: scale(0.8);
-        transition: 0.3s;
-      }
-    }
-    .github {
-      @include btn($s: 50px, $bg: #0f7886, $m: 0, $c: #37d0e4, $fs: 30px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      .icon {
-        margin-top: 3px;
-        transform: scale(1);
-        transition: 0.3s;
-      }
-      &:hover .icon {
-        transform: scale(0.8);
-        transition: 0.3s;
-      }
-    }
+  }
+  .github {
   }
 
   .bestScores {
