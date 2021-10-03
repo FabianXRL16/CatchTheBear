@@ -22,8 +22,9 @@ function toPlay() {
       setTimeout(function () {
         countdown.innerHTML = "GO!";
         countdownTitle.style.animationName = "shaking";
-        countdownTitle.style.animationDuration = ".3s"
-        countdownTitle.style.animationTiming = "cubic-bezier(0.895, 0.03, 0.685, 0.22)"
+        countdownTitle.style.animationDuration = ".3s";
+        countdownTitle.style.animationTiming =
+          "cubic-bezier(0.895, 0.03, 0.685, 0.22)";
         setTimeout(function () {
           playing.style.zIndex = 3;
           time.style.zIndex = 2;
@@ -34,11 +35,15 @@ function toPlay() {
   }, 1000);
 }
 
-let score = 0
-function countScore(){
-    let total = document.querySelector(".scoreTotal");
-    score = score+1
-    total.innerHTML = `Score ${score}`
+let score = 0;
+function countScore() {
+  let total = document.querySelector(".scoreTotal");
+  score = score + 1;
+  total.innerHTML = `Score ${score}`;
 }
 
-
+function sound() {
+  let sound = document.querySelector("#sound");
+  sound.classList.remove("fa-volume-down");
+  sound.classList.add("fa-volume-off");
+}
