@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .layer-9 {
-  @include layer($w: 100%, $h: 181.63px, $bg: transparent, $bt: 0, $lt: 0, $z: 9);
+  @include layer($w: 100%, $h:auto, $bg: transparent, $bt: 0, $lt: 0, $z: 9);
   margin: 0 auto;
   img {
     position: absolute;
