@@ -23,10 +23,6 @@
 
 @import './monkey/shadow';
 
-:root{
-    counter-reset: score;
-}
-
 body{
     background-color: $bg-primary;
     width: 100%;
@@ -35,7 +31,3 @@ body{
     display: grid;
     place-items: center;
 }
-
-input:checked{
-    counter-increment: score;
-  }

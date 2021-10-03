@@ -31,6 +31,8 @@
   width: 100%;
   height: 80px;
   left: -15px;
+  background-color: transparent;
+  border: none;
 }
 
 @mixin btn($s, $bg, $m, $c, $fs) {

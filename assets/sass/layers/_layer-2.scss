@@ -15,7 +15,7 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 
-  input[type="checkbox"] {
+  input[type=button] {
     @include input($z: 2);
   }
 }

@@ -19,13 +19,6 @@
       font-family: "Poppins", sans-serif;
       color: white;
       font-weight: 500;
-
-      &::after {
-        content: counter(score);
-        color: rgb(0, 156, 156);
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-      }
     }
 
     .author {
