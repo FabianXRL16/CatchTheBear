@@ -39,5 +39,6 @@ function countScore(){
     let total = document.querySelector(".scoreTotal");
     score = score+1
     total.innerHTML = `Score ${score}`
-    console.log(score)
 }
+
+

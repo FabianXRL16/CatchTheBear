@@ -103,6 +103,31 @@
   transform: scale(0.8);
   transition: 0.3s;
 }
+.lobby .controls .github {
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #0f7886;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0;
+  color: #37d0e4;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.lobby .controls .github .icon {
+  margin-top: 3px;
+  transform: scale(1);
+  transition: 0.3s;
+}
+.lobby .controls .github:hover .icon {
+  transform: scale(0.8);
+  transition: 0.3s;
+}
 .lobby .bestScores {
   text-align: center;
   font-family: "Poppins", sans-serif;
