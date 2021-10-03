@@ -1,0 +1,42 @@
+.playing {
+  position: relative;
+  height: 100%;
+  overflow-x: auto;
+  display: none;
+
+  .scoreTotal {
+    text-align: center;
+    margin-top: 70px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 500;
+
+    &::after {
+      content: counter(score);
+      color: rgb(0, 156, 156);
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+  }
+
+  .author {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 12;
+    text-align: center;
+    a {
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      color: $bg-tree-4;
+      font-weight: 500;
+      font-size: 12px;
+      transition: 0.3s;
+      transform: scale(0.9);
+      &:hover {
+        color: white;
+        transition: 0.3s;
+      }
+    }
+  }
+}

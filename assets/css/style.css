@@ -1,34 +1,159 @@
 .canvas {
-  position: relative;
+  overflow-x: auto;
   width: 425px;
   height: 676px;
   border-radius: 40px;
   border: 6px solid white;
   background-color: #37d0e4;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
-  overflow-x: auto;
 }
-.canvas .scoreTotal {
+
+.lobby {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+}
+.lobby .title {
+  display: grid;
+  grid-template-areas: "catch the" "catch bear";
+  grid-template-columns: 35px 1fr;
+  grid-template-rows: 5px 1fr;
+}
+.lobby .title .catch {
+  grid-area: catch;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: end;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  margin-right: -5px;
+  margin-top: 3px;
+  color: #025f6b;
+}
+.lobby .title .the {
+  grid-area: the;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 38px;
+  margin-top: -10px;
+  color: #0f7886;
+}
+.lobby .title .bear {
+  grid-area: bear;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  margin-left: -3px;
+  margin-top: 5px;
+  color: #caf9ff;
+}
+.lobby .btnPlay {
+  outline: none;
+  width: 120px;
+  height: 120px;
+  border: none;
+  background-color: #0f7886;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 0 30px;
+  color: #37d0e4;
+  font-size: 70px;
+}
+.lobby .btnPlay .icon {
+  transform: scale(1);
+  transition: 0.3s;
+  margin-left: 15px;
+}
+.lobby .btnPlay:hover .icon {
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+.lobby .controls {
+  display: flex;
+  gap: 15px;
+}
+.lobby .controls .btn {
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #0f7886;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 0 10px;
+  color: #37d0e4;
+  font-size: 30px;
+}
+.lobby .controls .btn .icon {
+  margin-top: 5px;
+  transform: scale(1);
+  transition: 0.3s;
+}
+.lobby .controls .btn:hover .icon {
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+.lobby .bestScores {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.lobby .bestScores h4 {
+  color: #caf9ff;
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+.lobby .bestScores ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.lobby .bestScores ul li {
+  list-style: none;
+}
+.lobby .bestScores ul li:nth-child(1) {
+  color: #0f7886;
+  font-size: 20px;
+}
+.lobby .bestScores ul li:nth-child(2) {
+  color: #0d92a3;
+  font-size: 18px;
+}
+.lobby .bestScores ul li:nth-child(3) {
+  color: #0aa5b9;
+  font-size: 16px;
+}
+
+.playing {
+  position: relative;
+  height: 100%;
+  overflow-x: auto;
+  display: none;
+}
+.playing .scoreTotal {
   text-align: center;
   margin-top: 70px;
   font-family: "Poppins", sans-serif;
   color: white;
   font-weight: 500;
 }
-.canvas .scoreTotal::after {
+.playing .scoreTotal::after {
   content: counter(score);
   color: #009c9c;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-.canvas .author {
+.playing .author {
   position: absolute;
   bottom: 15px;
   width: 100%;
   z-index: 12;
   text-align: center;
 }
-.canvas .author a {
+.playing .author a {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   color: #f7f313;
@@ -37,7 +162,7 @@
   transition: 0.3s;
   transform: scale(0.9);
 }
-.canvas .author a:hover {
+.playing .author a:hover {
   color: white;
   transition: 0.3s;
 }

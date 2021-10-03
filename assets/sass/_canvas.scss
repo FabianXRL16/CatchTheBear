@@ -1,50 +1,13 @@
 @import "./vars";
 
 .canvas {
-  position: relative;
+  overflow-x: auto;
   width: 425px;
   height: 676px;
   border-radius: 40px;
   border: 6px solid rgb(255, 255, 255);
   background-color: $bg-secondary;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 40px 60px -40px,
-    rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
-  overflow-x: auto;
-
-  .scoreTotal {
-    text-align: center;
-    margin-top: 70px;
-    font-family: "Poppins", sans-serif;
-    color: white;
-    font-weight: 500;
-
-    &::after {
-      content: counter(score);
-      color: rgb(0, 156, 156);
-      font-family: "Poppins", sans-serif;
-      font-weight: 600;
-    }
-  }
-
-  .author {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    z-index: 12;
-    text-align: center;
-    a {
-      text-decoration: none;
-      font-family: "Poppins", sans-serif;
-      color: $bg-tree-4;
-      font-weight: 500;
-      font-size: 12px;
-      transition: 0.3s;
-      transform: scale(0.9);
-      &:hover{
-        color: white;
-        transition: 0.3s;
-      }
-    }
-  }
+  rgba(0, 0, 0, 0.3) 0px 40px 60px -40px,
+  rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
 }

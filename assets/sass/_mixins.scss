@@ -32,3 +32,16 @@
   height: 80px;
   left: -15px;
 }
+
+@mixin btn($s, $bg, $m, $c, $fs) {
+  outline: none;
+  width: $s;
+  height: $s;
+  border: none;
+  background-color: $bg;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: $m;
+  color: $c;
+  font-size: $fs;
+}
