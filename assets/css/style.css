@@ -299,7 +299,7 @@
 .layer-1 {
   position: absolute;
   width: 100px;
-  height: 500px;
+  height: 420px;
   bottom: 0;
   right: 65px;
   left: auto;
@@ -325,19 +325,30 @@
 
 @keyframes bear1 {
   0% {
-    height: 500px;
-  }
-  25% {
     height: 420px;
   }
-  100% {
+  25% {
     height: 500px;
+  }
+  100% {
+    height: 420px;
+  }
+}
+@keyframes bearDead {
+  0% {
+    transform: translateX(20px);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
   }
 }
 .layer-2 {
   position: absolute;
   width: 100px;
-  height: 500px;
+  height: 420px;
   bottom: 0;
   right: auto;
   left: 110px;
@@ -363,13 +374,13 @@
 
 @keyframes bear2 {
   0% {
-    height: 500px;
-  }
-  10% {
     height: 420px;
   }
-  100% {
+  10% {
     height: 500px;
+  }
+  100% {
+    height: 420px;
   }
 }
 .layer-3 {
@@ -388,7 +399,7 @@
 .layer-4 {
   position: absolute;
   width: 100px;
-  height: 370px;
+  height: 3290px;
   bottom: 0;
   right: auto;
   left: 80px;
@@ -414,13 +425,13 @@
 
 @keyframes bear3 {
   0% {
-    height: 370px;
-  }
-  25% {
     height: 290px;
   }
-  100% {
+  25% {
     height: 370px;
+  }
+  100% {
+    height: 290px;
   }
 }
 .layer-5 {
@@ -439,15 +450,15 @@
 .layer-6 {
   position: absolute;
   width: 100px;
-  height: 265px;
+  height: 185px;
   bottom: 0;
   right: 45px;
   left: auto;
   z-index: 6;
   background-color: transparent;
   animation-name: bear4;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.16);
   animation-iteration-count: infinite;
 }
 .layer-6 input[type=button] {
@@ -465,13 +476,13 @@
 
 @keyframes bear4 {
   0% {
-    height: 265px;
-  }
-  10% {
     height: 185px;
   }
-  100% {
+  10% {
     height: 265px;
+  }
+  100% {
+    height: 185px;
   }
 }
 .layer-7 {

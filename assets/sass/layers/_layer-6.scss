@@ -3,7 +3,7 @@
 .layer-6 {
   @include layer(
     $w: 100px,
-    $h: 265px,
+    $h: 185px,
     $bt: 0,
     $rt: 45px,
     $z: 6
@@ -11,8 +11,8 @@
   background-color: transparent;
 
   animation-name: bear4;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.16);
   animation-iteration-count: infinite;
 
   input[type=button] {
@@ -22,12 +22,12 @@
 
 @keyframes bear4 {
   0% {
-    height: 265px;
-  }
-  10% {
     height: 185px;
   }
-  100% {
+  10% {
     height: 265px;
+  }
+  100% {
+    height: 185px;
   }
 }

@@ -37,10 +37,20 @@ function toPlay() {
 }
 
 let score = 0;
-function countScore() {
+function countScore(bear) {
   let total = document.querySelector(".scoreTotal");
   score = score + 1;
   total.innerHTML = `Score ${score}`;
+  let layer = document.querySelector(`.layer-${bear}`);
+  layer.style.transform = "scale(.8)";
+  layer.style.transition = ".5s";
+  setTimeout(function () {
+    layer.style.display = "none";
+    layer.style.transform = "scale(1)";
+    setTimeout(function () {
+      layer.style.display = "block";
+    }, 300);
+  }, 300);
 }
 
 let i = 2;

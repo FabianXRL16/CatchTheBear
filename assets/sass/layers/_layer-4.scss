@@ -1,33 +1,27 @@
 @import "../mixins";
 
 .layer-4 {
-  @include layer(
-    $w: 100px,
-    $h: 370px,
-    $bt: 0,
-    $lt: 80px,
-    $z: 4
-  );
+  @include layer($w: 100px, $h: 3290px, $bt: 0, $lt: 80px, $z: 4);
   background-color: transparent;
 
   animation-name: bear3;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-iteration-count: infinite;
 
-  input[type=button] {
+  input[type="button"] {
     @include input($z: 4);
   }
 }
 
 @keyframes bear3 {
   0% {
-    height: 370px;
-  }
-  25% {
     height: 290px;
   }
-  100% {
+  25% {
     height: 370px;
+  }
+  100% {
+    height: 290px;
   }
 }
