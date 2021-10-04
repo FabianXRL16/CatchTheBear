@@ -31,13 +31,14 @@ function toPlay() {
         countdownTitle.style.animationTiming =
           "cubic-bezier(0.895, 0.03, 0.685, 0.22)";
         setTimeout(function () {
-          playing.style.zIndex = 3;
+          countdown.innerHTML = "3";
+          countdown.style.zIndex = 0;
           time.style.zIndex = 2;
           time.style.opacity = 0;
           playing.style.filter = "blur(0)";
           score = 0;
-          setTimeout(gameTime, 700);
-        }, 300);
+          setTimeout(gameTime, 10);
+        }, 500);
       }, 1000);
     }, 1000);
   }, 1000);
