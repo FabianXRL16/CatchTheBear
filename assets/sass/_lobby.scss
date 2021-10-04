@@ -116,11 +116,11 @@
         }
       }
       .on {
-        display: block;
+        display: none;
         transition: .2s;
       }
       .off{
-        display: none;
+        display: block;
         transition: .2s;
       }
     }

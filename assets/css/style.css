@@ -136,11 +136,11 @@
   color: #caf9ff;
 }
 .lobby .controls .btn .on {
-  display: block;
+  display: none;
   transition: 0.2s;
 }
 .lobby .controls .btn .off {
-  display: none;
+  display: block;
   transition: 0.2s;
 }
 .lobby .controls .github {

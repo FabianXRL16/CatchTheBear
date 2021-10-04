@@ -96,34 +96,20 @@ function countScore(bear) {
   }, 300);
 }
 
-let m = 2;
-function theme() {
-  let sun = document.querySelector(".sun");
-  let moon = document.querySelector(".moon");
-  if (m % 2 === 0) {
-    sun.style.display = "none";
-    moon.style.display = "block";
-    moon.style.transform = "scale(1)";
-  } else {
-    moon.style.display = "none";
-    sun.style.display = "block";
-    sun.style.transform = "scale(1)";
-  }
-  m = m + 1;
-}
-
 let j = 2;
+let audio = new Audio("./assets/sound/sound.mp3")
 function sound() {
   let on = document.querySelector(".on");
   let off = document.querySelector(".off");
+  audio.paused ? audio.play() : audio.pause()
   if (j % 2 === 0) {
-    on.style.display = "none";
-    off.style.display = "block";
-    off.style.transform = "scale(1)";
-  } else {
     off.style.display = "none";
     on.style.display = "block";
     on.style.transform = "scale(1)";
+  } else {
+    on.style.display = "none";
+    off.style.display = "block";
+    off.style.transform = "scale(1)";
   }
   j = j + 1;
 }
