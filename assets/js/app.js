@@ -32,8 +32,8 @@ function toPlay() {
           "cubic-bezier(0.895, 0.03, 0.685, 0.22)";
         setTimeout(function () {
           countdown.innerHTML = "3";
-          countdown.style.zIndex = 0;
-          time.style.zIndex = 2;
+          countdown.style.zIndex = 2;
+          time.style.zIndex = 1;
           time.style.opacity = 0;
           playing.style.filter = "blur(0)";
           score = 0;
@@ -87,14 +87,14 @@ function countScore(bear) {
   total.innerHTML = `Score ${score}`;
   let layer = document.querySelector(`.layer-${bear}`);
   layer.style.transform = "scale(.8)";
-  layer.style.transition = ".5s";
+  layer.style.transition = ".2s";
   setTimeout(function () {
     layer.style.display = "none";
     layer.style.transform = "scale(1)";
     setTimeout(function () {
       layer.style.display = "block";
-    }, 300);
-  }, 300);
+    }, 200);
+  }, 200);
 }
 
 let j = 2;
