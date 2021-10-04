@@ -101,6 +101,7 @@ let audio = new Audio("./assets/sound/sound.mp3")
 function sound() {
   let on = document.querySelector(".on");
   let off = document.querySelector(".off");
+  audio.volume = 0.1
   audio.paused ? audio.play() : audio.pause()
   if (j % 2 === 0) {
     off.style.display = "none";
