@@ -36,7 +36,7 @@ function toPlay() {
           time.style.zIndex = 2;
           time.style.opacity = 0;
           playing.style.filter = "blur(0)";
-          score = 0
+          score = 0;
           setTimeout(gameTime, 700);
         }, 300);
       }, 1000);
@@ -115,6 +115,10 @@ function gameTime() {
 }
 
 function gameOver() {
+  addBestScores(score);
+  localStorage.clear();
+  localStorageAddScores(arr);
+
   let points = document.querySelector("#points");
   let time = document.querySelector("#time");
   let playing = document.querySelector("#playing");
@@ -140,4 +144,27 @@ function gameOver() {
     lobby.style.zIndex = 4;
     lobby.style.transform = "scale(1)";
   }, 1000);
+}
+
+let arr = [];
+function addBestScores(newScore) {
+  arr.push(newScore);
+  let i, j, aux;
+  for (i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        aux = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = aux;
+      }
+    }
+  }
+  arr.reverse();
+  if (arr.length === 4) {
+    arr.pop();
+  }
+}
+
+function localStorageAddScores(list) {
+  localStorage.setItem("localBestScores", JSON.stringify(list));
 }
