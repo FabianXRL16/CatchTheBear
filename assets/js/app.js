@@ -43,8 +43,40 @@ function toPlay() {
   }, 1000);
 }
 
-function reset(){
-  localStorage.clear()
+function reset() {
+  localStorage.clear();
+}
+
+function toShowBestScores() {
+  let listBestScores = document.querySelector("#bestScores");
+  let data = JSON.parse(localStorage.getItem("localBestScores"));
+  if (data) {
+    if (data[2]) {
+      listBestScores.innerHTML = `
+    <h4>Best Scores</h4>
+      <ul>
+      <li>${data[0]} ${data[0] === 1 ? "pto" : "ptos"}</li>
+      <li>${data[1]} ${data[1] === 1 ? "pto" : "ptos"}</li>
+      <li>${data[2]} ${data[2] === 1 ? "pto" : "ptos"}</li>
+      </ul>
+  `;
+    } else if(data[1]){
+      listBestScores.innerHTML = `
+    <h4>Best Scores</h4>
+      <ul>
+        <li>${data[0]} ${data[0] === 1 ? "pto" : "ptos"}</li>
+        <li>${data[1]} ${data[1] === 1 ? "pto" : "ptos"}</li>
+      </ul>
+  `;
+    }else{
+      listBestScores.innerHTML = `
+    <h4>Best Scores</h4>
+      <ul>
+        <li>${data[0]} ${data[0] === 1 ? "pto" : "ptos"}</li>
+      </ul>
+  `;
+    }
+  }
 }
 
 let score = 0;
@@ -146,6 +178,7 @@ function gameOver() {
     lobby.style.opacity = 1;
     lobby.style.zIndex = 4;
     lobby.style.transform = "scale(1)";
+    toShowBestScores();
   }, 1000);
 }
 
