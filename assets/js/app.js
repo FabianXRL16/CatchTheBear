@@ -1,8 +1,14 @@
 function toPlay() {
+  e = 6;
+  let notClick = document.querySelectorAll("#btnBear");
+  notClick.forEach((n) => {
+    n.disabled = false;
+  });
   let playing = document.querySelector("#playing");
   let time = document.querySelector("#time");
   let lobby = document.querySelector("#lobby");
   let countdown = document.getElementById("countdown");
+  // let points = document.querySelector("#points");
   let countdownTitle = document.querySelector("#countdown");
 
   playing.style.opacity = 1;
@@ -30,7 +36,8 @@ function toPlay() {
           time.style.zIndex = 2;
           time.style.opacity = 0;
           playing.style.filter = "blur(0)";
-          setTimeout(gameTime, 700)
+          score = 0
+          setTimeout(gameTime, 700);
         }, 300);
       }, 1000);
     }, 1000);
@@ -40,7 +47,7 @@ function toPlay() {
 let score = 0;
 function countScore(bear) {
   let total = document.querySelector(".scoreTotal");
-  score = score + 1;
+  score++;
   total.innerHTML = `Score ${score}`;
   let layer = document.querySelector(`.layer-${bear}`);
   layer.style.transform = "scale(.8)";
@@ -86,14 +93,51 @@ function sound() {
   j = j + 1;
 }
 
-let e = 5
-function gameTime(){
-  let time = document.querySelector(".timer")
-  e--
-  time.innerHTML = `${e}s`
-  var intervalo = setTimeout(gameTime, 1000)
-  if(e === 0){
-    clearInterval(intervalo)
-    console.log("hola")
+let e = 5;
+function gameTime() {
+  let time = document.querySelector(".timer");
+  time.style.color = "#0f7886";
+  e--;
+  time.innerHTML = `${e}s`;
+  var intervalo = setTimeout(gameTime, 1000);
+  if (e < 3) {
+    time.style.color = "red";
   }
+  if (e === 0) {
+    clearInterval(intervalo);
+    let notClick = document.querySelectorAll("#btnBear");
+    notClick.forEach((n) => {
+      n.disabled = true;
+    });
+    time.style.color = "red";
+    gameOver();
+  }
+}
+
+function gameOver() {
+  let points = document.querySelector("#points");
+  let time = document.querySelector("#time");
+  let playing = document.querySelector("#playing");
+  let lobby = document.querySelector("#lobby");
+
+  points.style.opacity = 1;
+  points.style.zIndex = 4;
+  points.style.transform = "scale(1)";
+  playing.style.filter = "blur(4px)";
+  time.style.opacity = 0;
+  time.style.display = 3;
+  time.style.transform = "scale(0)";
+
+  let newScore = document.querySelector("#titleGameOver");
+  newScore.innerHTML = `Your score <br> <b>${score}ptos</b>`;
+
+  setTimeout(function () {
+    points.style.opacity = 0;
+    points.style.zIndex = 1;
+    playing.style.opacity = 0;
+    playing.style.zIndex = 1;
+    lobby.style.opacity = 1;
+    lobby.style.zIndex = 4;
+    lobby.style.transform = "scale(1)";
+  }, 1000);
 }

@@ -26,7 +26,7 @@
   place-items: center;
   place-content: center;
   gap: 10px;
-  z-index: 3;
+  z-index: 2;
   opacity: 1;
   transition: 1s;
   transform: scale(1);
@@ -191,7 +191,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 4;
   opacity: 0;
   transition: 1s;
   transform: scale(0);
@@ -282,10 +282,10 @@
   display: grid;
   place-items: center;
   place-content: center;
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
   transform: scale(0);
-  background-color: rgba(55, 208, 228, 0.5);
+  background-color: rgba(55, 208, 228, 0.8);
   font-size: 60px;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
@@ -325,6 +325,28 @@
   100% {
     transform: translateX(0px);
   }
+}
+
+.points {
+  z-index: 1;
+  opacity: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(55, 208, 228, 0.8);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+  font-size: 40px;
+}
+.points span {
+  color: white;
+  text-shadow: 0px 0px 30px #022a30;
+}
+.points span b {
+  font-size: 60px;
 }
 
 .layer-1 {

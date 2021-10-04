@@ -1,0 +1,22 @@
+.points {
+  z-index: 1;
+  opacity: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(55, 208, 228, 0.8);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  text-align: center;
+  font-size: 40px;
+  span {
+    color: white;
+  text-shadow: 0px 0px 30px #022a30;
+
+    b {
+      font-size: 60px;
+    }
+  }
+}

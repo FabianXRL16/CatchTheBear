@@ -58,7 +58,7 @@
         </div>
         <!--monkey-->
         <div class="layer-1">
-          <input type="button" onclick="countScore(1)">
+          <input type="button" id="btnBear" onclick="countScore(1)">
           <div class="shadow"></div>
           <div class="ears"></div>
           <div class="head"></div>
@@ -68,7 +68,7 @@
         </div>
         <!--monkey-->
         <div class="layer-2">
-          <input type="button" onclick="countScore(2)">
+          <input type="button" id="btnBear" onclick="countScore(2)">
           <div class="shadow"></div>
           <div class="ears"></div>
           <div class="head"></div>
@@ -80,7 +80,7 @@
         <div class="layer-3"></div>
         <!--monkey-->
         <div class="layer-4">
-          <input type="button" onclick="countScore(4)">
+          <input type="button" id="btnBear" onclick="countScore(4)">
           <div class="shadow"></div>
           <div class="ears"></div>
           <div class="head"></div>
@@ -92,7 +92,7 @@
         <div class="layer-5"></div>
         <!--monkey-->
         <div class="layer-6">
-          <input type="button" onclick="countScore(6)">
+          <input type="button" id="btnBear" onclick="countScore(6)">
           <div class="shadow"></div>
           <div class="ears"></div>
           <div class="head"></div>
@@ -120,8 +120,9 @@
     <div class="time" id="time">
       <h1 id="countdown" class="countdown">3</h1>
     </div>
-    <div class="points">
-      <h1>hola</h1>
+    <div class="points" id="points">
+      <span id="titleGameOver">
+      </span>
     </div>
   </div>
   <script src="./assets/js/app.js"></script>
