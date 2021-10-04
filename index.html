@@ -49,8 +49,13 @@
       </div>
     </div>
     <div class="playing" id="playing">
-      <h1 class="timer">Time</h1>
       <div class="playing__container">
+        <div class="actions">
+          <button class="btn" onclick="cancel()">
+            <i class="icon fas fa-times"></i>
+          </button>
+          <span class="timer">5s</span>
+        </div>
         <!--monkey-->
         <div class="layer-1">
           <input type="button" onclick="countScore(1)">
@@ -114,6 +119,9 @@
     </div>
     <div class="time" id="time">
       <h1 id="countdown" class="countdown">3</h1>
+    </div>
+    <div class="points">
+      <h1>hola</h1>
     </div>
   </div>
   <script src="./assets/js/app.js"></script>

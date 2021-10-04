@@ -30,6 +30,7 @@ function toPlay() {
           time.style.zIndex = 2;
           time.style.opacity = 0;
           playing.style.filter = "blur(0)";
+          setTimeout(gameTime, 700)
         }, 300);
       }, 1000);
     }, 1000);
@@ -53,11 +54,11 @@ function countScore(bear) {
   }, 300);
 }
 
-let i = 2;
+let m = 2;
 function theme() {
   let sun = document.querySelector(".sun");
   let moon = document.querySelector(".moon");
-  if (i % 2 === 0) {
+  if (m % 2 === 0) {
     sun.style.display = "none";
     moon.style.display = "block";
     moon.style.transform = "scale(1)";
@@ -66,14 +67,14 @@ function theme() {
     sun.style.display = "block";
     sun.style.transform = "scale(1)";
   }
-  i = i + 1;
+  m = m + 1;
 }
 
 let j = 2;
 function sound() {
   let on = document.querySelector(".on");
   let off = document.querySelector(".off");
-  if (i % 2 === 0) {
+  if (j % 2 === 0) {
     on.style.display = "none";
     off.style.display = "block";
     off.style.transform = "scale(1)";
@@ -82,5 +83,17 @@ function sound() {
     on.style.display = "block";
     on.style.transform = "scale(1)";
   }
-  i = i + 1;
+  j = j + 1;
+}
+
+let e = 5
+function gameTime(){
+  let time = document.querySelector(".timer")
+  e--
+  time.innerHTML = `${e}s`
+  var intervalo = setTimeout(gameTime, 1000)
+  if(e === 0){
+    clearInterval(intervalo)
+    console.log("hola")
+  }
 }

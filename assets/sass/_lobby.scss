@@ -100,43 +100,43 @@
   .controls {
     display: flex;
     gap: 15px;
-  }
-  .btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: #0f7886;
-    border: 1px solid #caf9ff;
-    cursor: pointer;
-    .icon {
-      color: #37d0e4;
-      font-size: 20px;
-      &:hover{
-        color: #caf9ff;
+    .btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background-color: #0f7886;
+      border: 1px solid #caf9ff;
+      cursor: pointer;
+      .icon {
+        color: #37d0e4;
+        font-size: 20px;
+        &:hover{
+          color: #caf9ff;
+        }
+      }
+      .on, .sun {
+        display: block;
+        transition: .2s;
+      }
+      .off, .moon {
+        display: none;
+        transition: .2s;
       }
     }
-    .on, .sun {
-      display: block;
-      transition: .2s;
-    }
-    .off, .moon {
-      display: none;
-      transition: .2s;
-    }
-  }
-  .github {
-    color: #37d0e4;
-    font-size: 20px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    i {
-      transition: .2s;
-    }
-    &:hover i {
-      color: #caf9ff;
+    .github {
+      color: #37d0e4;
+      font-size: 20px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      i {
+        transition: .2s;
+      }
+      &:hover i {
+        color: #caf9ff;
+      }
     }
   }
 
