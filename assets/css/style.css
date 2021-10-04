@@ -11,14 +11,6 @@
 
 @media (max-width: 768px) {
   .canvas {
-    border-radius: 0px;
-    border: none;
-    box-shadow: none;
-    overflow-x: none;
-  }
-}
-@media (max-width: 425px) {
-  .canvas {
     width: 100vw;
     height: 100vh;
     border-radius: 0px;
@@ -204,6 +196,8 @@
   transition: 1s;
   transform: scale(0);
   filter: blur(6px);
+  display: flex;
+  justify-content: center;
 }
 .playing .playing__container {
   height: 100%;
@@ -244,6 +238,10 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
+  }
+  .playing .playing__container {
+    width: 425px;
+    height: 676px;
   }
 }
 .time {
@@ -597,8 +595,14 @@
   background-image: url(./../img/tree-tablet.svg);
   background-position: bottom;
   background-size: cover;
+  border-radius: 0 0 35px 35px;
 }
 
+@media (max-width: 768px) {
+  .layer-9 {
+    border-radius: 0;
+  }
+}
 .ears {
   position: absolute;
   width: 10px;

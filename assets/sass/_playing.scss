@@ -7,6 +7,8 @@
   transition: 1s;
   transform: scale(0);
   filter: blur(6px);
+  display: flex;
+  justify-content: center;
 
   .playing__container {
     height: 100%;
@@ -49,10 +51,9 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
-  }
-}
-
-@media (max-width: 425px) {
-  .playing {
+    .playing__container {
+      width: 425px;
+      height: 676px;
+    } 
   }
 }

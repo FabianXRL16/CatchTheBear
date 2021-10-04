@@ -6,14 +6,11 @@
   background-image: url(./../img/tree-tablet.svg);
   background-position: bottom;
   background-size: cover;
+  border-radius: 0 0 35px 35px;
 }
 
 @media (max-width: 768px) {
   .layer-9  {
-  }
-}
-
-@media (max-width: 425px) {
-  .layer-9  {
+    border-radius: 0;
   }
 }
