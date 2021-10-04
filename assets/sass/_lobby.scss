@@ -115,11 +115,11 @@
           color: #caf9ff;
         }
       }
-      .on, .sun {
+      .on {
         display: block;
         transition: .2s;
       }
-      .off, .moon {
+      .off{
         display: none;
         transition: .2s;
       }

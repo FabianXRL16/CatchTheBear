@@ -8,7 +8,6 @@ function toPlay() {
   let time = document.querySelector("#time");
   let lobby = document.querySelector("#lobby");
   let countdown = document.getElementById("countdown");
-  // let points = document.querySelector("#points");
   let countdownTitle = document.querySelector("#countdown");
 
   playing.style.opacity = 1;
@@ -42,6 +41,10 @@ function toPlay() {
       }, 1000);
     }, 1000);
   }, 1000);
+}
+
+function reset(){
+  localStorage.clear()
 }
 
 let score = 0;
@@ -113,10 +116,10 @@ function gameTime() {
     gameOver();
   }
 }
+let arr = [];
 
 function gameOver() {
   addBestScores(score);
-  localStorage.clear();
   localStorageAddScores(arr);
 
   let points = document.querySelector("#points");
@@ -146,7 +149,6 @@ function gameOver() {
   }, 1000);
 }
 
-let arr = [];
 function addBestScores(newScore) {
   arr.push(newScore);
   let i, j, aux;
@@ -160,9 +162,6 @@ function addBestScores(newScore) {
     }
   }
   arr.reverse();
-  if (arr.length === 4) {
-    arr.pop();
-  }
 }
 
 function localStorageAddScores(list) {

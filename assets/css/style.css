@@ -135,11 +135,11 @@
 .lobby .controls .btn .icon:hover {
   color: #caf9ff;
 }
-.lobby .controls .btn .on, .lobby .controls .btn .sun {
+.lobby .controls .btn .on {
   display: block;
   transition: 0.2s;
 }
-.lobby .controls .btn .off, .lobby .controls .btn .moon {
+.lobby .controls .btn .off {
   display: none;
   transition: 0.2s;
 }
