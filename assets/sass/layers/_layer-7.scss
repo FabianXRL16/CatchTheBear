@@ -1,9 +1,21 @@
-@import '../mixins';
+@import "../mixins";
 
-.layer-7{
-    @include layer($w: 200px, $h: 185px, $bg: $bg-tree-4, $bt: 0, $rt: 0, $z: 7);
+.layer-7 {
+  @include layer($w: 200px, $h: 185px, $bt: 0, $rt: 0, $z: 7);
+  background-color: $bg-tree-4;
+  border-radius: 20px 0 0 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+@media (max-width: 768px) {
+  .layer-7 {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .layer-7 {
     border-radius: 20px 0 0 0;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 40px 60px -40px,
-    rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
+  }
 }

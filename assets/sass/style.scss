@@ -1,33 +1,39 @@
-@import './vars';
+@import "./vars";
 
-@import './canvas';
-@import './lobby';
-@import './playing';
-@import './time';
+@import "./canvas";
+@import "./lobby";
+@import "./playing";
+@import "./time";
 
-@import './layers/layer-1';
-@import './layers/layer-2';
-@import './layers/layer-3';
-@import './layers/layer-4';
-@import './layers/layer-5';
-@import './layers/layer-6';
-@import './layers/layer-7';
-@import './layers/layer-8';
-@import './layers/layer-9';
+@import "./layers/layer-1";
+@import "./layers/layer-2";
+@import "./layers/layer-3";
+@import "./layers/layer-4";
+@import "./layers/layer-5";
+@import "./layers/layer-6";
+@import "./layers/layer-7";
+@import "./layers/layer-8";
+@import "./layers/layer-9";
 
-@import './monkey/ears';
-@import './monkey/eyes';
-@import './monkey/head';
-@import './monkey/mouth';
-@import './monkey/nose';
+@import "./monkey/ears";
+@import "./monkey/eyes";
+@import "./monkey/head";
+@import "./monkey/mouth";
+@import "./monkey/nose";
 
-@import './monkey/shadow';
+@import "./monkey/shadow";
 
-body{
-    background-color: $bg-primary;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    place-items: center;
+body {
+  background-color: $bg-primary;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: $bg-secondary;
+  }
 }

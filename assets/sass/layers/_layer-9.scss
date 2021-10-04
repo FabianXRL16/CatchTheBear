@@ -1,11 +1,19 @@
 @import "../mixins";
 
 .layer-9 {
-  @include layer($w: 100%, $h:auto, $bg: transparent, $bt: 0, $lt: 0, $z: 9);
+  @include layer($w: 100%, $h:181.5px, $bt: 0, $lt: 0, $z: 9);
   margin: 0 auto;
-  img {
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
+  background-image: url(./../img/tree-tablet.svg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .layer-9  {
+  }
+}
+
+@media (max-width: 425px) {
+  .layer-9  {
   }
 }

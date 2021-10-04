@@ -28,6 +28,7 @@ function toPlay() {
         setTimeout(function () {
           playing.style.zIndex = 3;
           time.style.zIndex = 2;
+          time.style.opacity = 0;
           playing.style.filter = "blur(0)";
         }, 300);
       }, 1000);

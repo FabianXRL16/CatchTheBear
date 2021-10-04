@@ -4,11 +4,11 @@
   @include layer(
     $w: 180px,
     $h: 120px,
-    $bg: transparent,
     $bt: 138px,
     $lt: 34px,
     $z: 8
   );
+  background-color: transparent;
   display: grid;
   grid-template-areas: "catch the" "catch bear";
   grid-template-columns: 35px 1fr;

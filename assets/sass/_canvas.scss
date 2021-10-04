@@ -13,6 +13,16 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .canvas {
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    
+  overflow-x: none;
+  }
+}
+
 @media (max-width: 425px) {
   .canvas {
     width: 100vw;

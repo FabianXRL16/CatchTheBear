@@ -43,3 +43,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .playing {
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .playing {
+  }
+}

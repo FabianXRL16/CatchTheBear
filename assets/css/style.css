@@ -9,6 +9,14 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .canvas {
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    overflow-x: none;
+  }
+}
 @media (max-width: 425px) {
   .canvas {
     width: 100vw;
@@ -231,6 +239,13 @@
   transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  .playing {
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+  }
+}
 .time {
   position: absolute;
   width: 100%;
@@ -287,11 +302,11 @@
   position: absolute;
   width: 100px;
   height: 500px;
-  background-color: transparent;
   bottom: 0;
   right: 65px;
   left: auto;
   z-index: 1;
+  background-color: transparent;
   animation-name: bear1;
   animation-duration: 1s;
   animation-timing-function: ease-in;
@@ -325,11 +340,11 @@
   position: absolute;
   width: 100px;
   height: 500px;
-  background-color: transparent;
   bottom: 0;
   right: auto;
   left: 110px;
   z-index: 2;
+  background-color: transparent;
   animation-name: bear2;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -363,24 +378,24 @@
   position: absolute;
   width: 340px;
   height: 420px;
-  background-color: #ff6961;
   bottom: 0;
   right: 20px;
   left: auto;
   z-index: 3;
+  background-color: #ff6961;
   border-radius: 20px 20px 0 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .layer-4 {
   position: absolute;
   width: 100px;
   height: 370px;
-  background-color: transparent;
   bottom: 0;
   right: auto;
   left: 80px;
   z-index: 4;
+  background-color: transparent;
   animation-name: bear3;
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -414,24 +429,24 @@
   position: absolute;
   width: 220px;
   height: 290px;
-  background-color: #1aa363;
   bottom: 0;
   right: auto;
   left: 20px;
   z-index: 5;
+  background-color: #1aa363;
   border-radius: 20px 20px 0 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .layer-6 {
   position: absolute;
   width: 100px;
   height: 265px;
-  background-color: transparent;
   bottom: 0;
   right: 45px;
   left: auto;
   z-index: 6;
+  background-color: transparent;
   animation-name: bear4;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -465,24 +480,34 @@
   position: absolute;
   width: 200px;
   height: 185px;
-  background-color: #f7f313;
   bottom: 0;
   right: 0;
   left: auto;
   z-index: 7;
+  background-color: #f7f313;
   border-radius: 20px 0 0 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 40px 60px -40px, rgba(10, 37, 64, 0.35) 0px -8px 25px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
+@media (max-width: 768px) {
+  .layer-7 {
+    border-radius: 20px 20px 0 0;
+  }
+}
+@media (max-width: 425px) {
+  .layer-7 {
+    border-radius: 20px 0 0 0;
+  }
+}
 .layer-8 {
   position: absolute;
   width: 180px;
   height: 120px;
-  background-color: transparent;
   bottom: 138px;
   right: auto;
   left: 34px;
   z-index: 8;
+  background-color: transparent;
   display: grid;
   grid-template-areas: "catch the" "catch bear";
   grid-template-columns: 35px 1fr;
@@ -563,18 +588,15 @@
 .layer-9 {
   position: absolute;
   width: 100%;
-  height: auto;
-  background-color: transparent;
+  height: 181.5px;
   bottom: 0;
   right: auto;
   left: 0;
   z-index: 9;
   margin: 0 auto;
-}
-.layer-9 img {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
+  background-image: url(./../img/tree-tablet.svg);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .ears {
@@ -762,6 +784,12 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #37d0e4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

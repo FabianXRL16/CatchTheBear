@@ -4,11 +4,11 @@
   @include layer(
     $w: 100px,
     $h: 265px,
-    $bg: transparent,
     $bt: 0,
     $rt: 45px,
     $z: 6
   );
+  background-color: transparent;
 
   animation-name: bear4;
   animation-duration: 2s;
