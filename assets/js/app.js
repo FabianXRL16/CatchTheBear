@@ -61,7 +61,7 @@ function toShowBestScores() {
       <li>${data[2]} ${data[2] === 1 ? "pto" : "ptos"}</li>
       </ul>
   `;
-    } else if(data[1]){
+    } else if (data[1]) {
       listBestScores.innerHTML = `
     <h4>Best Scores</h4>
       <ul>
@@ -69,7 +69,7 @@ function toShowBestScores() {
         <li>${data[1]} ${data[1] === 1 ? "pto" : "ptos"}</li>
       </ul>
   `;
-    }else{
+    } else {
       listBestScores.innerHTML = `
     <h4>Best Scores</h4>
       <ul>
@@ -98,12 +98,12 @@ function countScore(bear) {
 }
 
 let j = 2;
-let audio = new Audio("./assets/sound/sound.mp3")
+let audio = new Audio("./assets/sound/sound.mp3");
 function sound() {
   let on = document.querySelector(".on");
   let off = document.querySelector(".off");
-  audio.volume = 0.1
-  audio.paused ? audio.play() : audio.pause()
+  audio.volume = 0.1;
+  audio.paused ? audio.play() : audio.pause();
   if (j % 2 === 0) {
     off.style.display = "none";
     on.style.display = "block";
@@ -187,4 +187,18 @@ function addBestScores(newScore) {
 
 function localStorageAddScores(list) {
   localStorage.setItem("localBestScores", JSON.stringify(list));
+}
+
+function cancel() {
+  window.location.href = "/";
+  let playing = document.querySelector("#playing");
+  let lobby = document.querySelector("#lobby");
+  playing.style.transform = "scale(0)";
+  playing.style.opacity = 0;
+  playing.style.zIndex = 2;
+  playing.style.transition = ".5s";
+  lobby.style.opacity = 1;
+  lobby.style.zIndex = 4;
+  lobby.style.transform = "scale(1)";
+  lobby.style.transition = ".5s";
 }
