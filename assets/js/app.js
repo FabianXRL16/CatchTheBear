@@ -174,6 +174,7 @@ function gameOver() {
 }
 
 function addBestScores(newScore) {
+ if(!arr.includes(newScore)){
   arr.push(newScore);
   let i, j, aux;
   for (i = 0; i < arr.length; i++) {
@@ -186,6 +187,7 @@ function addBestScores(newScore) {
     }
   }
   arr.reverse();
+ }
 }
 
 function localStorageAddScores(list) {
