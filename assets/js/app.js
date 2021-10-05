@@ -136,8 +136,8 @@ function gameTime() {
     gameOver();
   }
 }
-let arr = [];
 
+let arr = [];
 function gameOver() {
   addBestScores(score);
   localStorageAddScores(arr);
