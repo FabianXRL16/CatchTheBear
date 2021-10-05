@@ -145,7 +145,7 @@ function gameOver() {
   localStorageAddScores(arr);
   
   let newScore = document.querySelector("#titleGameOver");
-  newScore.innerHTML = `Your score <br> <b>${score} ptos</b>`;
+  newScore.innerHTML = `Your score <br> <b>${score} ${score=== 1 ? "pto" : "ptos"}</b>`;
 
   let points = document.querySelector("#points");
   let time = document.querySelector("#time");
