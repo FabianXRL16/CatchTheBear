@@ -1,5 +1,8 @@
 function toPlay() {
   e = 6;
+  score=0;
+  let total = document.querySelector(".scoreTotal");
+    total.innerHTML = `Score 0`;
   let notClick = document.querySelectorAll("#btnBear");
   notClick.forEach((n) => {
     n.disabled = false;
@@ -9,7 +12,6 @@ function toPlay() {
   let lobby = document.querySelector("#lobby");
   let countdown = document.getElementById("countdown");
   let countdownTitle = document.querySelector("#countdown");
-
   playing.style.opacity = 1;
   playing.style.zIndex = 2;
   playing.style.transform = "scale(1)";
@@ -141,6 +143,9 @@ let arr = [];
 function gameOver() {
   addBestScores(score);
   localStorageAddScores(arr);
+  
+  let newScore = document.querySelector("#titleGameOver");
+  newScore.innerHTML = `Your score <br> <b>${score} ptos</b>`;
 
   let points = document.querySelector("#points");
   let time = document.querySelector("#time");
@@ -155,9 +160,7 @@ function gameOver() {
   time.style.display = 3;
   time.style.transform = "scale(0)";
 
-  let newScore = document.querySelector("#titleGameOver");
-  newScore.innerHTML = `Your score <br> <b>${score}ptos</b>`;
-
+  
   setTimeout(function () {
     points.style.opacity = 0;
     points.style.zIndex = 1;
