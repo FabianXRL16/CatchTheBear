@@ -23,10 +23,10 @@
       writing-mode: vertical-lr;
       transform: rotate(180deg);
       text-align: end;
-      font-size: 26px;
+      font-size: 29.5px;
       font-family: "Poppins", sans-serif;
       font-weight: 200;
-      margin-right: -5px;
+      margin-right: -8px;
       margin-top: 3px;
       color: #025f6b;
     }
@@ -44,7 +44,7 @@
       grid-area: bear;
       font-family: "Poppins", sans-serif;
       font-weight: 600;
-      font-size: 64px;
+      font-size: 74px;
       margin-left: -3px;
       margin-top: 5px;
       color: #caf9ff;
@@ -56,7 +56,7 @@
     border-radius: 50%;
     position: relative;
     background-color: #0f7886;
-    margin-bottom: 30px;
+    margin: 10px 0 10px;
     border: 1px solid #caf9ff;
     .btnPlay {
       @include btn($s: 130px, $br: 5px dotted #1b6670);
@@ -73,9 +73,17 @@
     .icon {
       position: absolute;
       font-size: 80px;
-      left: 40px;
-      top: 28px;
+      left: 42px;
+      top: 30px;
       color: #37d0e4;
+      transform: scale(1);
+      transition: .3s;
+    }
+    &:hover .icon{
+      left: 42px;
+      top: 31px;
+      transform: scale(.95);
+      transition: .3s;
     }
 
     @keyframes turn {
@@ -100,42 +108,67 @@
   .controls {
     display: flex;
     gap: 15px;
-    .btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: none;
-      background-color: #0f7886;
-      border: 1px solid #caf9ff;
-      cursor: pointer;
-      .icon {
-        color: #37d0e4;
-        font-size: 20px;
-        &:hover{
-          color: #caf9ff;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    height: 70px;
+    width: 300px;
+    .space {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .tooltip {
+        font-family: "Poppins", sans-serif;
+        color: #0f7886;
+        transform: scale(0);
+        transition: 0.3s;
+        font-size: 14px;
+      }
+      .btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: #0f7886;
+        border: 1px solid #caf9ff;
+        cursor: pointer;
+        .icon {
+          color: #37d0e4;
+          font-size: 20px;
+        }
+        .on {
+          display: none;
+          transition: .3s;
+        }
+        .off {
+          display: block;
+          transition: .3s;
         }
       }
-      .on {
-        display: none;
-        transition: .2s;
+      .ref {
+        color: #37d0e4;
+        font-size: 20px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        i {
+          transition: .3s;
+        }
       }
-      .off{
-        display: block;
-        transition: .2s;
-      }
-    }
-    .ref {
-      color: #37d0e4;
-      font-size: 20px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      i {
-        transition: .2s;
-      }
-      &:hover i {
-        color: #caf9ff;
+      &:hover {
+        .tooltip {
+          transform: scale(1);
+          transition: .3s;
+        }
+        .icon {
+          color: #caf9ff;
+        }
+        i {
+          color: #caf9ff;
+        }
       }
     }
   }
@@ -152,6 +185,7 @@
       padding: 0;
       display: flex;
       flex-direction: column;
+      margin: 0;
       li {
         list-style: none;
         &:nth-child(1) {

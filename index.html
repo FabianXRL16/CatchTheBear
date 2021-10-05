@@ -33,16 +33,31 @@
         </button>
       </div>
       <div class="controls">
-        <button class="btn" onclick="sound()">
-          <i class="icon on fas fa-volume-down"></i>
-          <i class="icon off fas fa-volume-off"></i>
-        </button>
-        <a class="btn ref" href="https://github.com/FabianXRL16" target="_blank">
-          <i class="fab fa-github-alt"></i>
-        </a>
-        <a class="btn ref" href="/" onclick="reset()">
-          <i class="icon fas fa-redo-alt"></i>
-        </a>
+        <div class="space">
+          <div class="tooltip">
+            <span>Sound</span>
+          </div>
+          <button class="btn" onclick="sound()">
+            <i class="icon on fas fa-volume-down"></i>
+            <i class="icon off fas fa-volume-off"></i>
+          </button>
+        </div>
+        <div class="space">
+          <div class="tooltip">
+            <span>Maker</span>
+          </div>
+          <a class="btn ref" href="https://github.com/FabianXRL16" target="_blank">
+            <i class="fab fa-github-alt"></i>
+          </a>
+        </div>
+        <div class="space">
+          <div class="tooltip">
+            <span>Reset</span>
+          </div>
+          <a class="btn ref" href="/" onclick="reset()">
+            <i class="icon fas fa-redo-alt"></i>
+          </a>
+        </div>
       </div>
       <div class="bestScores" id="bestScores">
       </div>

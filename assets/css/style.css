@@ -42,10 +42,10 @@
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   text-align: end;
-  font-size: 26px;
+  font-size: 29.5px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
-  margin-right: -5px;
+  margin-right: -8px;
   margin-top: 3px;
   color: #025f6b;
 }
@@ -61,7 +61,7 @@
   grid-area: bear;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 74px;
   margin-left: -3px;
   margin-top: 5px;
   color: #caf9ff;
@@ -72,7 +72,7 @@
   border-radius: 50%;
   position: relative;
   background-color: #0f7886;
-  margin-bottom: 30px;
+  margin: 10px 0 10px;
   border: 1px solid #caf9ff;
 }
 .lobby .spaceBtn .btnPlay {
@@ -95,9 +95,17 @@
 .lobby .spaceBtn .icon {
   position: absolute;
   font-size: 80px;
-  left: 40px;
-  top: 28px;
+  left: 42px;
+  top: 30px;
   color: #37d0e4;
+  transform: scale(1);
+  transition: 0.3s;
+}
+.lobby .spaceBtn:hover .icon {
+  left: 42px;
+  top: 31px;
+  transform: scale(0.95);
+  transition: 0.3s;
 }
 @keyframes turn {
   to {
@@ -118,8 +126,27 @@
 .lobby .controls {
   display: flex;
   gap: 15px;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  height: 70px;
+  width: 300px;
 }
-.lobby .controls .btn {
+.lobby .controls .space {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.lobby .controls .space .tooltip {
+  font-family: "Poppins", sans-serif;
+  color: #0f7886;
+  transform: scale(0);
+  transition: 0.3s;
+  font-size: 14px;
+}
+.lobby .controls .space .btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -128,22 +155,19 @@
   border: 1px solid #caf9ff;
   cursor: pointer;
 }
-.lobby .controls .btn .icon {
+.lobby .controls .space .btn .icon {
   color: #37d0e4;
   font-size: 20px;
 }
-.lobby .controls .btn .icon:hover {
-  color: #caf9ff;
-}
-.lobby .controls .btn .on {
+.lobby .controls .space .btn .on {
   display: none;
-  transition: 0.2s;
+  transition: 0.3s;
 }
-.lobby .controls .btn .off {
+.lobby .controls .space .btn .off {
   display: block;
-  transition: 0.2s;
+  transition: 0.3s;
 }
-.lobby .controls .ref {
+.lobby .controls .space .ref {
   color: #37d0e4;
   font-size: 20px;
   display: grid;
@@ -151,10 +175,17 @@
   align-items: center;
   text-decoration: none;
 }
-.lobby .controls .ref i {
-  transition: 0.2s;
+.lobby .controls .space .ref i {
+  transition: 0.3s;
 }
-.lobby .controls .ref:hover i {
+.lobby .controls .space:hover .tooltip {
+  transform: scale(1);
+  transition: 0.3s;
+}
+.lobby .controls .space:hover .icon {
+  color: #caf9ff;
+}
+.lobby .controls .space:hover i {
   color: #caf9ff;
 }
 .lobby .bestScores {
@@ -170,6 +201,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 .lobby .bestScores ul li {
   list-style: none;

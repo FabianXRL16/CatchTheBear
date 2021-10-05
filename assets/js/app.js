@@ -49,7 +49,7 @@ function toPlay() {
 function reset() {
   localStorage.clear();
 }
-
+toShowBestScores()
 function toShowBestScores() {
   let listBestScores = document.querySelector("#bestScores");
   let data = JSON.parse(localStorage.getItem("localBestScores"));
@@ -171,7 +171,6 @@ function gameOver() {
     lobby.style.opacity = 1;
     lobby.style.zIndex = 4;
     lobby.style.transform = "scale(1)";
-    toShowBestScores();
   }, 1000);
 }
 
