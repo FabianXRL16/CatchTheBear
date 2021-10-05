@@ -141,7 +141,9 @@ function gameTime() {
 
 let arr = [];
 function gameOver() {
-  addBestScores(score);
+  if(score > 0){
+    addBestScores(score);
+  }
   localStorageAddScores(arr);
   
   let newScore = document.querySelector("#titleGameOver");
