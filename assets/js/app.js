@@ -1,5 +1,5 @@
 function toPlay() {
-  e = 6;
+  e = 11;
   score = 0;
   let total = document.querySelector(".scoreTotal");
   total.innerHTML = `Score 0`;
@@ -113,7 +113,7 @@ function sound() {
   j = j + 1;
 }
 
-let e = 5;
+let e = 10;
 function gameTime() {
   let time = document.querySelector(".timer");
   time.style.color = "#0f7886";
