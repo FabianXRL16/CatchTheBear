@@ -105,6 +105,7 @@ function sound() {
   let on = document.querySelector(".on");
   let off = document.querySelector(".off");
   audio.volume = 0.1;
+  audio.loop = true
   audio.paused ? audio.play() : audio.pause();
   if (j % 2 === 0) {
     off.style.display = "none";
