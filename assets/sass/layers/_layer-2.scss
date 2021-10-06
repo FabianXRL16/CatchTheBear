@@ -31,3 +31,15 @@
     height: 420px;
   }
 }
+
+@media (max-width: 405px) {
+  .layer-2 {
+    @include layer($w: 100px, $h: 420px, $bt: 0, $lt: 17%, $z: 2);
+  }
+}
+
+@media (max-width: 330px) {
+  .layer-2 {
+    @include layer($w: 100px, $h: 420px, $bt: 0, $lt: 15%, $z: 2);
+  }
+}

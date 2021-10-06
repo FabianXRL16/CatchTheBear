@@ -19,3 +19,9 @@
     border-radius: 20px 0 0 0;
   }
 }
+
+@media (max-width: 405px) {
+  .layer-7 {
+    @include layer($w:50%, $h: 185px, $bt: 0, $rt: 0, $z: 7);
+  }
+}

@@ -46,3 +46,15 @@
     transform: translateX(20px);
   }
 }
+
+@media (max-width: 405px) {
+  .layer-1 {
+    @include layer($w: 100px, $h: 420px, $bt: 0, $rt: 13%, $z: 1);
+  }
+}
+
+@media (max-width: 405px) {
+  .layer-1 {
+    @include layer($w: 100px, $h: 420px, $bt: 0, $rt: 10%, $z: 1);
+  }
+}

@@ -31,3 +31,9 @@
     height: 185px;
   }
 }
+
+@media (max-width: 405px) {
+  .layer-6 {
+    @include layer($w: 100px, $h: 185px, $bt: 0, $lt: calc(50% + 50px), $z: 6);
+  }
+}

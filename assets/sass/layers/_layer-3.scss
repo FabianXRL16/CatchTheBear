@@ -1,15 +1,16 @@
 @import "../mixins";
 
 .layer-3 {
-  @include layer(
-    $w: 340px,
-    $h: 420px,
-    $bt: 0,
-    $rt: 20px,
-    $z: 3
-  );
+  @include layer($w: 340px, $h: 420px, $bt: 0, $rt: 20px, $z: 3);
   background-color: $bg-tree-1;
   border-radius: 20px 20px 0 0;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+@media (max-width: 405px) {
+  .layer-3 {
+    @include layer($w: 90%, $h: 420px, $bt: 0, $rt: 0, $lt: 0, $z: 3);
+    margin: 0 auto;
+  }
 }

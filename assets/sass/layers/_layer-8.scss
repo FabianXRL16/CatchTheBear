@@ -1,13 +1,7 @@
 @import "../mixins";
 
 .layer-8 {
-  @include layer(
-    $w: 180px,
-    $h: 120px,
-    $bt: 138px,
-    $lt: 34px,
-    $z: 8
-  );
+  @include layer($w: 180px, $h: 120px, $bt: 138px, $lt: 34px, $z: 8);
   background-color: transparent;
   display: grid;
   grid-template-areas: "catch the" "catch bear";
@@ -91,5 +85,13 @@
     100% {
       color: #a4f8d1;
     }
+  }
+}
+
+@media (max-width: 405px) {
+  .layer-8 {
+    @include layer($w: 180px, $h: 120px, $bt: 138px, $lt: calc(30% - 90px), $z: 8);
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: 25px 1fr;
   }
 }

@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .layer-4 {
-  @include layer($w: 100px, $h: 3290px, $bt: 0, $lt: 80px, $z: 4);
+  @include layer($w: 100px, $h: 370px, $bt: 0, $lt: 80px, $z: 4);
   background-color: transparent;
 
   animation-name: bear3;
@@ -23,5 +23,11 @@
   }
   100% {
     height: 290px;
+  }
+}
+
+@media (max-width: 405px) {
+  .layer-4 {
+    @include layer($w: 100px, $h: 370px, $bt: 0, $lt: calc(35% - 50px), $z: 4);
   }
 }
