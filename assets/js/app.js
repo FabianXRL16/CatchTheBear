@@ -88,11 +88,13 @@ function countScore(bear) {
   let layer = document.querySelector(`.layer-${bear}`);
   layer.style.transform = "scale(.8)";
   layer.style.transition = ".2s";
+  layer.disabled = true;
   setTimeout(function () {
-    layer.style.display = "none";
+    layer.style.opacity = 0
     layer.style.transform = "scale(1)";
+    layer.disabled = false;
     setTimeout(function () {
-      layer.style.display = "block";
+      layer.style.opacity = 1
     }, 200);
   }, 200);
 }
