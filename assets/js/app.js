@@ -1,3 +1,5 @@
+let closedGame = false
+
 function toPlay() {
   e = 11;
   score = 0;
@@ -115,7 +117,8 @@ function sound() {
 
 let e = 10;
 function gameTime() {
-  let time = document.querySelector(".timer");
+  if(!closedGame){
+    let time = document.querySelector(".timer");
   time.style.color = "#0f7886";
   e--;
   time.innerHTML = `${e}s`;
@@ -131,6 +134,7 @@ function gameTime() {
     });
     time.style.color = "red";
     gameOver();
+  }
   }
 }
 
@@ -199,4 +203,6 @@ function cancel() {
   lobby.style.transform = "scale(1)";
   lobby.style.transition = ".5s";
   score = 0;
+  e=11;
+  closedGame = true
 }
