@@ -25,14 +25,14 @@
 
 ##Tablet View
 
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletLobby.png)
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletGo.png)
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletPlay.png)
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletGameOver.png)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletLobby.jpg)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletGo.jpg)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletPlay.jpg)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/TabletGameOver.jpg)
 
 ##Mobile View
 
 ![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobileLobby.png)
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobileGo.png)
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobilePlay.png)
-![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobileGameOver.png)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobileGo.jpg)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobilePlay.jpg)
+![](https://raw.githubusercontent.com/FabianXRL16/CatchMonkey/master/assets/img/ScreenShots/MobileGameOver.jpg)
