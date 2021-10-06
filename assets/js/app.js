@@ -1,10 +1,11 @@
-let closedGame = false
+let closedGame = false;
 
 function toPlay() {
-  e = 11;
-  score = 0;
   let total = document.querySelector(".scoreTotal");
   total.innerHTML = `Score 0`;
+  closedGame = false;
+  e = 11;
+  score = 0;
   let notClick = document.querySelectorAll("#btnBear");
   notClick.forEach((n) => {
     n.disabled = false;
@@ -117,24 +118,26 @@ function sound() {
 
 let e = 10;
 function gameTime() {
-  if(!closedGame){
-    let time = document.querySelector(".timer");
-  time.style.color = "#0f7886";
-  e--;
-  time.innerHTML = `${e}s`;
-  var intervalo = setTimeout(gameTime, 1000);
-  if (e < 3) {
-    time.style.color = "red";
-  }
-  if (e === 0) {
-    clearInterval(intervalo);
-    let notClick = document.querySelectorAll("#btnBear");
-    notClick.forEach((n) => {
-      n.disabled = true;
-    });
-    time.style.color = "red";
-    gameOver();
-  }
+  let time = document.querySelector(".timer");
+  if (!closedGame) {
+    time.style.color = "#0f7886";
+    e--;
+    time.innerHTML = `${e}s`;
+    var intervalo = setTimeout(gameTime, 1000);
+    if (e < 3) {
+      time.style.color = "#043036";
+    }
+    if (e === 0) {
+      clearInterval(intervalo);
+      let notClick = document.querySelectorAll("#btnBear");
+      notClick.forEach((n) => {
+        n.disabled = true;
+      });
+      time.style.color = "#043036";
+      gameOver();
+    }
+  } else {
+    time.innerHTML = "10s";
   }
 }
 
@@ -203,6 +206,6 @@ function cancel() {
   lobby.style.transform = "scale(1)";
   lobby.style.transition = ".5s";
   score = 0;
-  e=11;
-  closedGame = true
+  e = 11;
+  closedGame = true;
 }
