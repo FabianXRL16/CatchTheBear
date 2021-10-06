@@ -1,8 +1,8 @@
 function toPlay() {
   e = 6;
-  score=0;
+  score = 0;
   let total = document.querySelector(".scoreTotal");
-    total.innerHTML = `Score 0`;
+  total.innerHTML = `Score 0`;
   let notClick = document.querySelectorAll("#btnBear");
   notClick.forEach((n) => {
     n.disabled = false;
@@ -47,39 +47,34 @@ function toPlay() {
 }
 
 function reset() {
-  localStorage.clear();
+  localStorage.removeItem("localBestScores");
 }
-toShowBestScores()
+
+toShowBestScores();
+
+function getData() {
+  let getItem = localStorage.getItem("localBestScores");
+  if (!getItem) {
+    return [];
+  }
+  return JSON.parse(getItem);
+}
+
 function toShowBestScores() {
   let listBestScores = document.querySelector("#bestScores");
-  let data = JSON.parse(localStorage.getItem("localBestScores"));
-  if (data) {
-    if (data[2]) {
-      listBestScores.innerHTML = `
-    <h4>Best Scores</h4>
-      <ul>
-      <li>${data[0]} ${data[0] === 1 ? "pto" : "ptos"}</li>
-      <li>${data[1]} ${data[1] === 1 ? "pto" : "ptos"}</li>
-      <li>${data[2]} ${data[2] === 1 ? "pto" : "ptos"}</li>
-      </ul>
-  `;
-    } else if (data[1]) {
-      listBestScores.innerHTML = `
-    <h4>Best Scores</h4>
-      <ul>
-        <li>${data[0]} ${data[0] === 1 ? "pto" : "ptos"}</li>
-        <li>${data[1]} ${data[1] === 1 ? "pto" : "ptos"}</li>
-      </ul>
-  `;
-    } else {
-      listBestScores.innerHTML = `
-    <h4>Best Scores</h4>
-      <ul>
-        <li>${data[0]} ${data[0] === 1 ? "pto" : "ptos"}</li>
-      </ul>
-  `;
-    }
+  let data = getData();
+  listBestScores.innerHTML = "";
+  if (!data || data.length == 0) {
+    return;
   }
+  let html = `
+    <h4>Best Scores</h4>
+    <ul>`;
+  data.forEach((score) => {
+    html += `<li>${score} ${score === 1 ? "pto" : "ptos"}</li>`;
+  });
+  html += `</ul>`;
+  listBestScores.innerHTML = html;
 }
 
 let score = 0;
@@ -139,15 +134,18 @@ function gameTime() {
   }
 }
 
-let arr = [];
+let arr = getData();
+
 function gameOver() {
-  if(score > 0){
+  if (score > 0) {
     addBestScores(score);
   }
   localStorageAddScores(arr);
-  
+
   let newScore = document.querySelector("#titleGameOver");
-  newScore.innerHTML = `Your score <br> <b>${score} ${score=== 1 ? "pto" : "ptos"}</b>`;
+  newScore.innerHTML = `Your score <br> <b>${score} ${
+    score === 1 ? "pto" : "ptos"
+  }</b>`;
 
   let points = document.querySelector("#points");
   let time = document.querySelector("#time");
@@ -162,7 +160,8 @@ function gameOver() {
   time.style.display = 3;
   time.style.transform = "scale(0)";
 
-  
+  toShowBestScores();
+
   setTimeout(function () {
     points.style.opacity = 0;
     points.style.zIndex = 1;
@@ -175,20 +174,13 @@ function gameOver() {
 }
 
 function addBestScores(newScore) {
- if(!arr.includes(newScore)){
-  arr.push(newScore);
-  let i, j, aux;
-  for (i = 0; i < arr.length; i++) {
-    for (j = 0; j < arr.length; j++) {
-      if (arr[j] > arr[j + 1]) {
-        aux = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = aux;
-      }
-    }
+  if (!arr.includes(newScore)) {
+    arr.push(newScore);
   }
-  arr.reverse();
- }
+  arr
+    .sort((a, b) => a - b)
+    .reverse()
+    .splice(3, 1);
 }
 
 function localStorageAddScores(list) {
@@ -196,7 +188,6 @@ function localStorageAddScores(list) {
 }
 
 function cancel() {
-  window.location.href = "/";
   let playing = document.querySelector("#playing");
   let lobby = document.querySelector("#lobby");
   playing.style.transform = "scale(0)";
@@ -207,4 +198,5 @@ function cancel() {
   lobby.style.zIndex = 4;
   lobby.style.transform = "scale(1)";
   lobby.style.transition = ".5s";
+  score = 0;
 }
